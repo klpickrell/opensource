@@ -1,0 +1,5 @@
+frame 10 part 1 of 2 to sp1 from sp2
+frame 10 part 2 of 2 to sp1 from sp2
+frame 20 part 1 of 2 to sp3 from sp2
+frame 20 part 2 of 2 to sp3 from sp2
+ 

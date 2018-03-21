@@ -1,0 +1,139 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <errno.h>
+
+using namespace std;
+
+
+int insert(int array[], int length, int value) 
+{
+  int instrcount = 1;
+  int i = length - 1; instrcount++;
+
+  while (i >= 0 and array[i] > value) { instrcount++; instrcount++;
+
+    array[i + 1] = array[i]; instrcount++;
+    i--; instrcount++;
+  }
+
+  array[i + 1] = value; instrcount++;
+  return instrcount; 
+}
+ 
+int insertion_sort2(int array[], int length) 
+{
+  int instrcount = 1;
+  int i = 1; instrcount++;
+
+  while (i < length) { instrcount++;
+
+  instrcount += insert(array, i, array[i]) + 1;
+  i++; instrcount++;
+
+  }
+
+  instrcount++;
+  return instrcount;
+}
+
+int insertion_sort( int array[], int length )
+{
+  int instruction_count = 1;
+  int i = 1; instruction_count++;
+  while( i < length ) { instruction_count++;
+    for( int j = 0; j < i; j++ ) { instruction_count++; instruction_count++;
+      if( array[i] < array[j] ) { instruction_count++;
+	int temp = array[i]; instruction_count++;
+	array[i] = array[j]; instruction_count++;
+	array[j] = temp; instruction_count++;
+      }
+    }
+
+    i++; instruction_count++;
+  }
+
+  instruction_count++;
+  return instruction_count;
+}
+
+bool test_insertion( int trialcount )
+{
+  bool success = true;
+  srand( time( 0 ) );
+  FILE* fp = fopen( "./insertion.out", "wt" );
+  FILE* fp2 = fopen( "./insertion2.out", "wt" );
+  if( !fp || !fp2 ) {
+    cout << "failed to open output file insertion.out" << endl;
+    return false;
+  }
+
+  for( int i = 0; i < trialcount; i++ ) {
+
+    int size = i+10;
+    int* array = new int[ size ];
+
+    for( int j = 0; j < size; j++ ) {
+      array[ j ] = (rand()/(float)RAND_MAX) * 10000;
+    }
+
+    int count = insertion_sort( array, size );
+    fprintf( fp, "%d\t%d\n", size, count );
+
+    for( int j = 0; j < size; j++ ) {
+      array[ j ] = (rand()/(float)RAND_MAX) * 10000;
+    }
+
+    count = 2*insertion_sort2( array, size );
+    fprintf( fp2, "%d\t%d\n", size, count );
+    
+    
+    if( size ) {
+      int last = array[0];
+      for( int j = 1; j < size; j++ ) {
+	if( array[j] >= last ) {
+	  last = array[j];
+	} else {
+	  cout << "sequence comparison failure on array: " << endl;
+	  for( int p = 0; p < size; p++ )
+	    cout << array[p] << " ";
+	  cout << endl << "size=" << size << ", index=" << j << endl;
+	  delete[] array;
+	  success = false;
+	  break;
+	}
+      }
+    }
+
+
+    delete[] array;
+  }
+
+  return success;
+}
+
+int main( int argc, char** argv )
+{
+  if( argc < 2 ) {
+    cout << "usage: sorts <trialcount>" << endl;
+    return 1;
+  }
+
+  errno = 0;
+  int trialcount = (int)atol(argv[1]);
+  if( errno ) {
+    cout << "atol conversion error: errno=" << errno << endl;
+    return 1;
+  }
+
+  cout << "testing insertion_sort with " << trialcount << " trials" << endl;
+  if( test_insertion( trialcount ) ) {
+    cout << "passed" << endl;
+  } else {
+    cout << "failed" << endl;
+  }
+
+  return 0;
+}
+
+

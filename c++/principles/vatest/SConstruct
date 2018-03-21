@@ -1,0 +1,9 @@
+from glob import *;
+import os
+
+env = Environment( CPPPATH=[ '/usr/local/include' ] )
+source=glob( "*.cc" )
+target=os.popen( r'echo `basename $(pwd)`' ).readline().rstrip()
+print "compiling %s with source %s" % (target,source)
+env.Program( target=target, source=source )
+

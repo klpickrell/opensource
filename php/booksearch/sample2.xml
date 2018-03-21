@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sections>
+  <section>
+    <name specialattribute="thing">
+      <first>Harry</first>
+      <last>Winston</last>
+    </name>
+    <data>Some Data</data>
+  </section>
+  <section>
+    <name>
+      <first>Larry</first>
+      <last>Flintstone</last>
+    </name>
+    <data>Some More Data</data>
+  </section>
+</sections>

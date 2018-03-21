@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main( int argc, char** argv )
+{
+
+    // What the hell ?????????????????/
+    cout << "blah" << endl;
+
+    return 0;
+}
+
+

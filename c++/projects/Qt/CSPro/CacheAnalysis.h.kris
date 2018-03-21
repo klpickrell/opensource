@@ -1,0 +1,60 @@
+#ifndef _CACHE_ANALYSIS_H_
+#define _CACHE_ANALYSIS_H_
+
+#include <list>
+#include <exception>
+#include <boost/shared_ptr.hpp>
+
+#include "CacheInput.h"
+#include "CacheOutput.h"
+
+class CacheException : public std::exception
+{
+public:
+    CacheException( const std::string& what ) :
+        m_what( what ) 
+    {}
+
+    ~CacheException() throw() {}
+    const char* what() const throw() { return m_what.c_str(); }
+
+private:
+    
+    std::string m_what;
+};
+
+
+#define MAX_NUM_SETS 66000
+
+typedef struct cacheSimulationRootType
+{
+  WordElementType cacheSet;
+}CacheSimulationRootType;
+
+class CacheAnalysis
+{
+public:
+
+    CacheAnalysis( boost::shared_ptr<CacheInputClass> inputs ) :
+        m_inputs( inputs )
+    {}
+
+    bool MoreWords();
+    void StartAnalysis();
+    void ProcessNextWord();
+    void PerformCacheAnalysis();
+    void PerformTemporalAnalysis();
+    int compare(WordElementType word1, WordElementType word2);
+    void InsertLFU(list<WordElementType> &row);
+    unsigned int GetInd(WordElementType &word);
+
+private:
+
+    boost::shared_ptr<CacheInputClass> m_inputs;
+    unsigned int inpind;
+    int numRows;
+    CacheOutputClass cacheOup;
+    list<WordElementType> cacheMat[MAX_NUM_SETS];
+};
+
+#endif

@@ -1,0 +1,3 @@
+env = Environment( CPPPATH=[ '/usr/local/include' ] );
+env.Program( 'main.cc' );
+

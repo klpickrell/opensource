@@ -1,0 +1,151 @@
+Script started on Sat 29 Mar 2008 09:06:49 PM CDT
+]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>make
+yacc -d -v -o grammar.c grammar.y
+lex -oscanner.c scanner.l
+gcc -o yaccproj grammar.c scanner.c
+]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>,/ya[Kll
+[00mtotal 148
+drwxrwxr-x  3 klpickrell users  4096 Mar 29 21:06 [01;34m.[00m
+drwxrwxr-x  7 klpickrell users  4096 Mar 14 22:12 [01;34m..[00m
+-rw-rw-r--  1 klpickrell users  1940 Mar 29 20:52 [00mbnfgrammar.txt[00m
+-rw-rw-r--  1 klpickrell users   205 Mar 28 18:31 [00mexample1.lisp[00m
+-rw-rw-r--  1 klpickrell users   308 Mar 28 18:35 [00mexample2.lisp[00m
+-rw-rw-r--  1 klpickrell users 20407 Mar 29 21:06 [00mgrammar.c[00m
+-rw-rw-r--  1 klpickrell users   669 Mar 29 21:06 [00mgrammar.h[00m
+-rw-rw-r--  1 klpickrell users 17941 Mar 29 21:06 [00mgrammar.output[00m
+-rw-rw-r--  1 klpickrell users  3732 Mar 28 16:38 [00mgrammar.y[00m
+-rw-rw-r--  1 klpickrell users   256 Mar 19 20:35 [00mMakefile[00m
+-rw-rw-r--  1 klpickrell users 42689 Mar 29 21:06 [00mscanner.c[00m
+-rw-rw-r--  1 klpickrell users  1963 Mar 29 20:38 [00mscanner.l[00m
+drwxrwxr-x  7 klpickrell users  4096 Mar 29 21:06 [01;34m.svn[00m
+-rw-rw-r--  1 klpickrell users     0 Mar 29 21:06 [00mtypescript[00m
+-rwxrwxr-x  1 klpickrell users 20631 Mar 29 21:06 [00;32myaccproj[00m
+[m]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>./yaccproj <[Kcat example1.lisp 
+;; this is a lisp program that computes the factorial of 10
+;; factorial of 10
+
+(let (defun factorial (n) ; this is a comment on a line
+  (if (leq n 1) 1 
+    (mul n (factorial (sub n 1))))) . ( n . 10))
+
+]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>,/[K[K./yaccproj < example1.lisp 
+LET
+DEFUN
+NAME: factorial
+name
+NAME: n
+name
+argument_list
+IF
+three_place_op
+LEQ
+NAME: n
+name
+clause
+NUMBER
+numeral
+atom
+clause
+NUMBER
+numeral
+atom
+clause
+MUL
+NAME: n
+name
+clause
+NAME: factorial
+name
+SUB
+NAME: n
+name
+clause
+NUMBER
+numeral
+atom
+clause
+call_clause
+op_clause_list
+defun_clause
+NAME: n
+name
+NUMBER
+numeral
+atom
+clause
+declaration_list
+let_clause
+]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>cat example2.lisp 
+; this function counts from 1 to 10 and then calls finalize
+; when it reaches 11.  Finalize is a lambda function that 
+; multiplies value by 10
+
+(defun testfunc(value finalize)
+  (let (if (leq 10 value)
+           (finalize value) 
+           (testfunc (add value 1) (lambda (c) (mul c 10)))) .(value . 1)))
+]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>./yaccproj < example2.lisp 
+DEFUN
+NAME: testfunc
+name
+NAME: value
+name
+NAME: finalize
+name
+non_empty_argument_seq
+argument_list
+LET
+IF
+three_place_op
+LEQ
+NUMBER
+numeral
+atom
+clause
+NAME: value
+name
+clause
+NAME: finalize
+name
+NAME: value
+name
+clause
+call_clause
+NAME: testfunc
+name
+ADD
+NAME: value
+name
+clause
+NUMBER
+numeral
+atom
+clause
+LAMBDA
+NAME: c
+name
+argument_list
+MUL
+NAME: c
+name
+clause
+NUMBER
+numeral
+atom
+clause
+lambda_clause
+clause_sequence
+call_clause
+op_clause_list
+NAME: value
+name
+NUMBER
+numeral
+atom
+clause
+declaration_list
+let_clause
+defun_clause
+]0;klpickrell@goetz:~/school/Spring08/CS5318/lispkit_project[1;33mgoetz: [1;32mlispkit_project>exit
+
+Script done on Sat 29 Mar 2008 09:07:54 PM CDT

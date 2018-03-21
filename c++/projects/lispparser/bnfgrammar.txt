@@ -1,0 +1,81 @@
+Note: terminals should be italicized
+
+<program> ::= <letrec_clause> 
+          | <lambda_clause> 
+          | <let_clause> 
+          | <defun_clause>
+          | <call_clause>
+
+<op-clause-list> ::= <quote-nil>
+                 | '(' <one-place-op> <clause> ')'
+                 | '(' <two-place-op> <clause> <clause> ')'
+                 | '(' <three-place-op <clause> <clause> <clause> ')'
+
+<one-place-op> ::= 'sq'
+               | 'odd'
+               | 'even'
+               | 'head'
+               | 'tail'
+               | 'atom'
+               | 'null'
+               | 'not'
+               | 'chr'
+
+<two-place-op> ::= 'add'
+               | 'sub'
+               | 'mul'
+               | 'div'
+               | 'rem'
+               | 'leq'
+               | 'eq'
+               | 'and'
+               | 'or'
+               | 'cons'
+
+<three-place-op> ::= 'if'
+
+<clause> ::= <letrec-clause>
+      | <let-clause>
+      | <lambda-clause>
+      | <defun-clause>
+      | <call-clause>
+      | <quote-clause>
+      | <op-clause-list>
+      | <atom>
+
+<letrec-clause> ::= '(letrec ' <clause> '.' <declaration-list> ')'
+
+<let-clause> ::= '(let ' <clause> '.' <declaration-list> ')'
+
+<lambda-clause> ::= '(lambda ' <argument-list> <clause> ')'
+
+<defun-clause> ::= '(defun ' <name> <argument-list> <clause> ')'
+
+<call-clause> ::= '(' <name> {<clause>} ')'
+
+<quote-clause> ::= '(quote ' <s-expression> ')'
+
+<declaration-list> ::= <quote-nil>
+                   | ( '(' <name> '.' <clause> ')' )+
+
+<quote-nil> ::= '(quote nil)'
+
+<argument-list> ::= <quote-nil>
+                | <name>+
+
+<s-expression> ::= <atom>
+               | '(' <s-expression-seq> ')'
+
+<s-expression-seq> ::= <s-expression>
+                   | <s-expression> '.' <s-expression>
+                   | <s-expression-seq> <s-expression>
+
+<atom> ::= <name> | <numeral>
+
+<name> ::= <letter> { <letter> | <digit> }
+
+<numeral> ::= <digit>+
+
+<digit> ::= [0-9]
+
+<letter> ::= [a-zA-Z]

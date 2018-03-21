@@ -1,0 +1,5 @@
+frame 1 part 1 of 2 to sp2 from sp1
+frame 1 part 2 of 2 to sp2 from sp1
+frame 2 part 1 of 2 to sp2 from sp1
+frame 2 part 2 of 2 to sp2 from sp1
+ 

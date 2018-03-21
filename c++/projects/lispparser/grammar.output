@@ -1,0 +1,1142 @@
+   0  $accept : program $end
+
+   1  program : letrec_clause
+   2          | lambda_clause
+   3          | let_clause
+   4          | defun_clause
+   5          | call_clause
+
+   6  op_clause_list : '(' QUOTE NIL ')'
+   7                 | '(' one_place_op clause ')'
+   8                 | '(' two_place_op clause clause ')'
+   9                 | '(' three_place_op clause clause clause ')'
+
+  10  one_place_op : SQ
+  11               | ODD
+  12               | EVEN
+  13               | HEAD
+  14               | TAIL
+  15               | ATOM
+  16               | NULL_TOKEN
+  17               | NOT
+  18               | CHR
+
+  19  two_place_op : ADD
+  20               | SUB
+  21               | MUL
+  22               | DIV
+  23               | REM
+  24               | LEQ
+  25               | EQ
+  26               | AND
+  27               | OR
+  28               | CONS
+
+  29  three_place_op : IF
+
+  30  clause : letrec_clause
+  31         | let_clause
+  32         | lambda_clause
+  33         | defun_clause
+  34         | call_clause
+  35         | quote_clause
+  36         | op_clause_list
+  37         | atom
+
+  38  letrec_clause : '(' LETREC clause '.' declaration_list ')'
+
+  39  let_clause : '(' LET clause '.' declaration_list ')'
+
+  40  lambda_clause : '(' LAMBDA argument_list clause ')'
+
+  41  defun_clause : '(' DEFUN name argument_list clause ')'
+
+  42  call_clause : '(' name ')'
+  43              | '(' name clause_sequence ')'
+
+  44  clause_sequence : clause
+  45                  | clause_sequence clause
+
+  46  quote_clause : '(' QUOTE s_expression ')'
+
+  47  declaration_list : '(' QUOTE NIL ')'
+  48                   | non_empty_declaration_seq
+
+  49  non_empty_declaration_seq : '(' name '.' clause ')'
+  50                            | non_empty_declaration_seq '(' name '.' clause ')'
+
+  51  argument_list : '(' QUOTE NIL ')'
+  52                | '(' non_empty_argument_seq ')'
+
+  53  non_empty_argument_seq : name
+  54                         | non_empty_argument_seq name
+
+  55  s_expression : atom
+  56               | '(' s_expression_seq ')'
+
+  57  s_expression_seq : s_expression
+  58                   | s_expression '.' s_expression
+  59                   | s_expression_seq s_expression
+
+  60  atom : name
+  61       | numeral
+
+  62  name : NAME
+
+  63  numeral : NUMBER
+
+state 0
+	$accept : . program $end  (0)
+
+	'('  shift 1
+	.  error
+
+	program  goto 2
+	letrec_clause  goto 3
+	lambda_clause  goto 4
+	let_clause  goto 5
+	defun_clause  goto 6
+	call_clause  goto 7
+
+
+state 1
+	letrec_clause : '(' . LETREC clause '.' declaration_list ')'  (38)
+	let_clause : '(' . LET clause '.' declaration_list ')'  (39)
+	lambda_clause : '(' . LAMBDA argument_list clause ')'  (40)
+	defun_clause : '(' . DEFUN name argument_list clause ')'  (41)
+	call_clause : '(' . name ')'  (42)
+	call_clause : '(' . name clause_sequence ')'  (43)
+
+	LET  shift 8
+	LETREC  shift 9
+	LAMBDA  shift 10
+	DEFUN  shift 11
+	NAME  shift 12
+	.  error
+
+	name  goto 13
+
+
+state 2
+	$accept : program . $end  (0)
+
+	$end  accept
+
+
+state 3
+	program : letrec_clause .  (1)
+
+	.  reduce 1
+
+
+state 4
+	program : lambda_clause .  (2)
+
+	.  reduce 2
+
+
+state 5
+	program : let_clause .  (3)
+
+	.  reduce 3
+
+
+state 6
+	program : defun_clause .  (4)
+
+	.  reduce 4
+
+
+state 7
+	program : call_clause .  (5)
+
+	.  reduce 5
+
+
+state 8
+	let_clause : '(' LET . clause '.' declaration_list ')'  (39)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 22
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 9
+	letrec_clause : '(' LETREC . clause '.' declaration_list ')'  (38)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 27
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 10
+	lambda_clause : '(' LAMBDA . argument_list clause ')'  (40)
+
+	'('  shift 28
+	.  error
+
+	argument_list  goto 29
+
+
+state 11
+	defun_clause : '(' DEFUN . name argument_list clause ')'  (41)
+
+	NAME  shift 12
+	.  error
+
+	name  goto 30
+
+
+state 12
+	name : NAME .  (62)
+
+	.  reduce 62
+
+
+state 13
+	call_clause : '(' name . ')'  (42)
+	call_clause : '(' name . clause_sequence ')'  (43)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	')'  shift 31
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 32
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	clause_sequence  goto 33
+	numeral  goto 26
+
+
+state 14
+	numeral : NUMBER .  (63)
+
+	.  reduce 63
+
+
+state 15
+	op_clause_list : '(' . QUOTE NIL ')'  (6)
+	op_clause_list : '(' . one_place_op clause ')'  (7)
+	op_clause_list : '(' . two_place_op clause clause ')'  (8)
+	op_clause_list : '(' . three_place_op clause clause clause ')'  (9)
+	letrec_clause : '(' . LETREC clause '.' declaration_list ')'  (38)
+	let_clause : '(' . LET clause '.' declaration_list ')'  (39)
+	lambda_clause : '(' . LAMBDA argument_list clause ')'  (40)
+	defun_clause : '(' . DEFUN name argument_list clause ')'  (41)
+	call_clause : '(' . name ')'  (42)
+	call_clause : '(' . name clause_sequence ')'  (43)
+	quote_clause : '(' . QUOTE s_expression ')'  (46)
+
+	LET  shift 8
+	LETREC  shift 9
+	LAMBDA  shift 10
+	DEFUN  shift 11
+	QUOTE  shift 34
+	ADD  shift 35
+	SUB  shift 36
+	MUL  shift 37
+	DIV  shift 38
+	REM  shift 39
+	SQ  shift 40
+	ODD  shift 41
+	EVEN  shift 42
+	LEQ  shift 43
+	EQ  shift 44
+	HEAD  shift 45
+	TAIL  shift 46
+	ATOM  shift 47
+	NULL_TOKEN  shift 48
+	IF  shift 49
+	NOT  shift 50
+	AND  shift 51
+	OR  shift 52
+	CHR  shift 53
+	CONS  shift 54
+	NAME  shift 12
+	.  error
+
+	one_place_op  goto 55
+	two_place_op  goto 56
+	three_place_op  goto 57
+	name  goto 13
+
+
+state 16
+	clause : letrec_clause .  (30)
+
+	.  reduce 30
+
+
+state 17
+	clause : lambda_clause .  (32)
+
+	.  reduce 32
+
+
+state 18
+	clause : let_clause .  (31)
+
+	.  reduce 31
+
+
+state 19
+	clause : defun_clause .  (33)
+
+	.  reduce 33
+
+
+state 20
+	clause : call_clause .  (34)
+
+	.  reduce 34
+
+
+state 21
+	clause : op_clause_list .  (36)
+
+	.  reduce 36
+
+
+state 22
+	let_clause : '(' LET clause . '.' declaration_list ')'  (39)
+
+	'.'  shift 58
+	.  error
+
+
+state 23
+	clause : quote_clause .  (35)
+
+	.  reduce 35
+
+
+state 24
+	clause : atom .  (37)
+
+	.  reduce 37
+
+
+state 25
+	atom : name .  (60)
+
+	.  reduce 60
+
+
+state 26
+	atom : numeral .  (61)
+
+	.  reduce 61
+
+
+state 27
+	letrec_clause : '(' LETREC clause . '.' declaration_list ')'  (38)
+
+	'.'  shift 59
+	.  error
+
+
+state 28
+	argument_list : '(' . QUOTE NIL ')'  (51)
+	argument_list : '(' . non_empty_argument_seq ')'  (52)
+
+	QUOTE  shift 60
+	NAME  shift 12
+	.  error
+
+	name  goto 61
+	non_empty_argument_seq  goto 62
+
+
+state 29
+	lambda_clause : '(' LAMBDA argument_list . clause ')'  (40)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 63
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 30
+	defun_clause : '(' DEFUN name . argument_list clause ')'  (41)
+
+	'('  shift 28
+	.  error
+
+	argument_list  goto 64
+
+
+state 31
+	call_clause : '(' name ')' .  (42)
+
+	.  reduce 42
+
+
+state 32
+	clause_sequence : clause .  (44)
+
+	.  reduce 44
+
+
+state 33
+	call_clause : '(' name clause_sequence . ')'  (43)
+	clause_sequence : clause_sequence . clause  (45)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	')'  shift 65
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 66
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 34
+	op_clause_list : '(' QUOTE . NIL ')'  (6)
+	quote_clause : '(' QUOTE . s_expression ')'  (46)
+
+	NIL  shift 67
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 68
+	.  error
+
+	atom  goto 69
+	name  goto 25
+	s_expression  goto 70
+	numeral  goto 26
+
+
+state 35
+	two_place_op : ADD .  (19)
+
+	.  reduce 19
+
+
+state 36
+	two_place_op : SUB .  (20)
+
+	.  reduce 20
+
+
+state 37
+	two_place_op : MUL .  (21)
+
+	.  reduce 21
+
+
+state 38
+	two_place_op : DIV .  (22)
+
+	.  reduce 22
+
+
+state 39
+	two_place_op : REM .  (23)
+
+	.  reduce 23
+
+
+state 40
+	one_place_op : SQ .  (10)
+
+	.  reduce 10
+
+
+state 41
+	one_place_op : ODD .  (11)
+
+	.  reduce 11
+
+
+state 42
+	one_place_op : EVEN .  (12)
+
+	.  reduce 12
+
+
+state 43
+	two_place_op : LEQ .  (24)
+
+	.  reduce 24
+
+
+state 44
+	two_place_op : EQ .  (25)
+
+	.  reduce 25
+
+
+state 45
+	one_place_op : HEAD .  (13)
+
+	.  reduce 13
+
+
+state 46
+	one_place_op : TAIL .  (14)
+
+	.  reduce 14
+
+
+state 47
+	one_place_op : ATOM .  (15)
+
+	.  reduce 15
+
+
+state 48
+	one_place_op : NULL_TOKEN .  (16)
+
+	.  reduce 16
+
+
+state 49
+	three_place_op : IF .  (29)
+
+	.  reduce 29
+
+
+state 50
+	one_place_op : NOT .  (17)
+
+	.  reduce 17
+
+
+state 51
+	two_place_op : AND .  (26)
+
+	.  reduce 26
+
+
+state 52
+	two_place_op : OR .  (27)
+
+	.  reduce 27
+
+
+state 53
+	one_place_op : CHR .  (18)
+
+	.  reduce 18
+
+
+state 54
+	two_place_op : CONS .  (28)
+
+	.  reduce 28
+
+
+state 55
+	op_clause_list : '(' one_place_op . clause ')'  (7)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 71
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 56
+	op_clause_list : '(' two_place_op . clause clause ')'  (8)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 72
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 57
+	op_clause_list : '(' three_place_op . clause clause clause ')'  (9)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 73
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 58
+	let_clause : '(' LET clause '.' . declaration_list ')'  (39)
+
+	'('  shift 74
+	.  error
+
+	declaration_list  goto 75
+	non_empty_declaration_seq  goto 76
+
+
+state 59
+	letrec_clause : '(' LETREC clause '.' . declaration_list ')'  (38)
+
+	'('  shift 74
+	.  error
+
+	declaration_list  goto 77
+	non_empty_declaration_seq  goto 76
+
+
+state 60
+	argument_list : '(' QUOTE . NIL ')'  (51)
+
+	NIL  shift 78
+	.  error
+
+
+state 61
+	non_empty_argument_seq : name .  (53)
+
+	.  reduce 53
+
+
+state 62
+	argument_list : '(' non_empty_argument_seq . ')'  (52)
+	non_empty_argument_seq : non_empty_argument_seq . name  (54)
+
+	NAME  shift 12
+	')'  shift 79
+	.  error
+
+	name  goto 80
+
+
+state 63
+	lambda_clause : '(' LAMBDA argument_list clause . ')'  (40)
+
+	')'  shift 81
+	.  error
+
+
+state 64
+	defun_clause : '(' DEFUN name argument_list . clause ')'  (41)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 82
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 65
+	call_clause : '(' name clause_sequence ')' .  (43)
+
+	.  reduce 43
+
+
+state 66
+	clause_sequence : clause_sequence clause .  (45)
+
+	.  reduce 45
+
+
+state 67
+	op_clause_list : '(' QUOTE NIL . ')'  (6)
+
+	')'  shift 83
+	.  error
+
+
+state 68
+	s_expression : '(' . s_expression_seq ')'  (56)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 68
+	.  error
+
+	atom  goto 69
+	name  goto 25
+	s_expression  goto 84
+	s_expression_seq  goto 85
+	numeral  goto 26
+
+
+state 69
+	s_expression : atom .  (55)
+
+	.  reduce 55
+
+
+state 70
+	quote_clause : '(' QUOTE s_expression . ')'  (46)
+
+	')'  shift 86
+	.  error
+
+
+state 71
+	op_clause_list : '(' one_place_op clause . ')'  (7)
+
+	')'  shift 87
+	.  error
+
+
+state 72
+	op_clause_list : '(' two_place_op clause . clause ')'  (8)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 88
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 73
+	op_clause_list : '(' three_place_op clause . clause clause ')'  (9)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 89
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 74
+	declaration_list : '(' . QUOTE NIL ')'  (47)
+	non_empty_declaration_seq : '(' . name '.' clause ')'  (49)
+
+	QUOTE  shift 90
+	NAME  shift 12
+	.  error
+
+	name  goto 91
+
+
+state 75
+	let_clause : '(' LET clause '.' declaration_list . ')'  (39)
+
+	')'  shift 92
+	.  error
+
+
+state 76
+	declaration_list : non_empty_declaration_seq .  (48)
+	non_empty_declaration_seq : non_empty_declaration_seq . '(' name '.' clause ')'  (50)
+
+	'('  shift 93
+	')'  reduce 48
+
+
+state 77
+	letrec_clause : '(' LETREC clause '.' declaration_list . ')'  (38)
+
+	')'  shift 94
+	.  error
+
+
+state 78
+	argument_list : '(' QUOTE NIL . ')'  (51)
+
+	')'  shift 95
+	.  error
+
+
+state 79
+	argument_list : '(' non_empty_argument_seq ')' .  (52)
+
+	.  reduce 52
+
+
+state 80
+	non_empty_argument_seq : non_empty_argument_seq name .  (54)
+
+	.  reduce 54
+
+
+state 81
+	lambda_clause : '(' LAMBDA argument_list clause ')' .  (40)
+
+	.  reduce 40
+
+
+state 82
+	defun_clause : '(' DEFUN name argument_list clause . ')'  (41)
+
+	')'  shift 96
+	.  error
+
+
+state 83
+	op_clause_list : '(' QUOTE NIL ')' .  (6)
+
+	.  reduce 6
+
+
+state 84
+	s_expression_seq : s_expression .  (57)
+	s_expression_seq : s_expression . '.' s_expression  (58)
+
+	'.'  shift 97
+	NUMBER  reduce 57
+	NAME  reduce 57
+	'('  reduce 57
+	')'  reduce 57
+
+
+state 85
+	s_expression : '(' s_expression_seq . ')'  (56)
+	s_expression_seq : s_expression_seq . s_expression  (59)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 68
+	')'  shift 98
+	.  error
+
+	atom  goto 69
+	name  goto 25
+	s_expression  goto 99
+	numeral  goto 26
+
+
+state 86
+	quote_clause : '(' QUOTE s_expression ')' .  (46)
+
+	.  reduce 46
+
+
+state 87
+	op_clause_list : '(' one_place_op clause ')' .  (7)
+
+	.  reduce 7
+
+
+state 88
+	op_clause_list : '(' two_place_op clause clause . ')'  (8)
+
+	')'  shift 100
+	.  error
+
+
+state 89
+	op_clause_list : '(' three_place_op clause clause . clause ')'  (9)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 101
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 90
+	declaration_list : '(' QUOTE . NIL ')'  (47)
+
+	NIL  shift 102
+	.  error
+
+
+state 91
+	non_empty_declaration_seq : '(' name . '.' clause ')'  (49)
+
+	'.'  shift 103
+	.  error
+
+
+state 92
+	let_clause : '(' LET clause '.' declaration_list ')' .  (39)
+
+	.  reduce 39
+
+
+state 93
+	non_empty_declaration_seq : non_empty_declaration_seq '(' . name '.' clause ')'  (50)
+
+	NAME  shift 12
+	.  error
+
+	name  goto 104
+
+
+state 94
+	letrec_clause : '(' LETREC clause '.' declaration_list ')' .  (38)
+
+	.  reduce 38
+
+
+state 95
+	argument_list : '(' QUOTE NIL ')' .  (51)
+
+	.  reduce 51
+
+
+state 96
+	defun_clause : '(' DEFUN name argument_list clause ')' .  (41)
+
+	.  reduce 41
+
+
+state 97
+	s_expression_seq : s_expression '.' . s_expression  (58)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 68
+	.  error
+
+	atom  goto 69
+	name  goto 25
+	s_expression  goto 105
+	numeral  goto 26
+
+
+state 98
+	s_expression : '(' s_expression_seq ')' .  (56)
+
+	.  reduce 56
+
+
+state 99
+	s_expression_seq : s_expression_seq s_expression .  (59)
+
+	.  reduce 59
+
+
+state 100
+	op_clause_list : '(' two_place_op clause clause ')' .  (8)
+
+	.  reduce 8
+
+
+state 101
+	op_clause_list : '(' three_place_op clause clause clause . ')'  (9)
+
+	')'  shift 106
+	.  error
+
+
+state 102
+	declaration_list : '(' QUOTE NIL . ')'  (47)
+
+	')'  shift 107
+	.  error
+
+
+state 103
+	non_empty_declaration_seq : '(' name '.' . clause ')'  (49)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 108
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 104
+	non_empty_declaration_seq : non_empty_declaration_seq '(' name . '.' clause ')'  (50)
+
+	'.'  shift 109
+	.  error
+
+
+state 105
+	s_expression_seq : s_expression '.' s_expression .  (58)
+
+	.  reduce 58
+
+
+state 106
+	op_clause_list : '(' three_place_op clause clause clause ')' .  (9)
+
+	.  reduce 9
+
+
+state 107
+	declaration_list : '(' QUOTE NIL ')' .  (47)
+
+	.  reduce 47
+
+
+state 108
+	non_empty_declaration_seq : '(' name '.' clause . ')'  (49)
+
+	')'  shift 110
+	.  error
+
+
+state 109
+	non_empty_declaration_seq : non_empty_declaration_seq '(' name '.' . clause ')'  (50)
+
+	NUMBER  shift 14
+	NAME  shift 12
+	'('  shift 15
+	.  error
+
+	letrec_clause  goto 16
+	lambda_clause  goto 17
+	let_clause  goto 18
+	defun_clause  goto 19
+	call_clause  goto 20
+	op_clause_list  goto 21
+	clause  goto 111
+	quote_clause  goto 23
+	atom  goto 24
+	name  goto 25
+	numeral  goto 26
+
+
+state 110
+	non_empty_declaration_seq : '(' name '.' clause ')' .  (49)
+
+	.  reduce 49
+
+
+state 111
+	non_empty_declaration_seq : non_empty_declaration_seq '(' name '.' clause . ')'  (50)
+
+	')'  shift 112
+	.  error
+
+
+state 112
+	non_empty_declaration_seq : non_empty_declaration_seq '(' name '.' clause ')' .  (50)
+
+	.  reduce 50
+
+
+37 terminals, 23 nonterminals
+64 grammar rules, 113 states

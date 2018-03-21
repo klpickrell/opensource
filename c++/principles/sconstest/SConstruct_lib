@@ -1,0 +1,3 @@
+SharedLibrary( 'notify', 'lib.cc' )
+
+

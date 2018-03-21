@@ -1,0 +1,16 @@
+# file: input.txt
+# Two arrays in the format shown below.  Valid delimiters are whitespace and commas
+# note: if input fails, check that there is either a space or comma between the first and second [ and 
+# last two ]
+
+# array1
+
+[   [ 1 0 1 ]
+    [ 2 1 0 ]
+    [ 2 3 1 ] ]
+
+# array2
+
+[   [ 4 2 3 ]
+    [ 1 7 3 ] 
+    [ 3 2 1 ]   ]

@@ -1,0 +1,61 @@
+Kris Pickrell (kp26069@txstate.edu)
+
+Homework 3 submission
+Class: CS 5306
+Date:  11/05/2007
+
+Contents:
+
+Makefile - generates project from source
+matrix.h - some data structures used in the program
+matrixthreads.c - the main program
+input.txt - convenience file useful for entering from stdin
+
+
+Compiling:
+
+Compile the project by typing 'make' from the command line.  You should
+see output similar to the following:
+
+
+$ make
+
+gcc -g -c -o matrixthreads.o matrixthreads.c
+gcc -g -o matrixthreads -lpthread  matrixthreads.o
+
+
+It will create the program 'matrixthreads' in the current directory.
+
+Running:
+
+Run the program from the command line like this:
+
+$ ./matrixthreads < input.txt
+
+
+array 1 is:
+[ 1 0 1 ]
+[ 2 1 0 ]
+[ 2 3 1 ]
+array 2 is:
+[ 4 2 3 ]
+[ 1 7 3 ]
+[ 3 2 1 ]
+created threads to compute matrix product
+computed matrix product array1 * array2:
+[ 7 4 4 ]
+[ 9 11 9 ]
+[ 14 27 16 ]
+
+
+
+
+You will see what the program thinks the input file consisted of and
+what the product is.  Read the input.txt for the expected format.
+
+ 
+
+
+
+
+

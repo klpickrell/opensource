@@ -1,0 +1,1889 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Description" content="
+Powell's Books is the largest independent used and new bookstore in the world. We carry an extensive collection of out of print rare, and technical titles as well as many other new and used books in every field.
+
+">
+<meta name="Keywords" content="
+Powell's, Powells, Powellsbooks, powells.com, New, Used, Used Books, Rare, Books, Arts, Business, Careers, Computers, Internet, Cooking, Education, Engineering, Erotica, Fiction, Poetry, Remainders, Sale, Health, Sell Used Books, Well Being, History, Home, Garden, Humanities, Languages, Foreign, Leisure, Linguistics, Literature, Math, Mathematics, Physics, Technical, Popular Reading, Rare Books, Antiquarian, Religion, Spirituality, Science Fiction, Fantasy, Horror, Science, Engineering, Children's Books, Social Science, Travel, Reference, Audio Books, internet
+
+">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<title>Powell's Books - Search Results</title>
+
+<script type="text/javascript" language="javascript" src="/js/mootools_071102.js"></script>
+
+<script type="text/javascript" language="javascript" src="/js/combined_js_071102.js"></script>
+
+
+
+
+<script type="text/javascript">
+<!--
+
+var popupWin;
+function popupwin() { popupWin = window.open("", "sec_window", "scrollbars,resizable,width=450,height=400"); }
+
+function open_window(url,w,h) {
+if (!w) w=500;
+if (!h) h=500;
+   mywin = window.open(url,"win","toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=1,resizable=0,WIDTH=" + w + ",HEIGHT=" + h);
+}
+
+
+if (Cookie.get('partner_password')) {
+   var partner_info = Cookie.get('partner_password').split(":");
+   partner_id = partner_info[0];
+} else {
+   var partner_id = false;
+}
+//-->
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Powells.com - Overview" href="/rss/powells_content.xml" />
+<link rel="alternate" type="application/rss+xml" title="PowellsBooks.news" href="/rss/pbn.xml" />
+<link rel="alternate" type="application/rss+xml" title="Review-A-Day" href="/rss/rad.xml" />
+<link rel="alternate" type="application/rss+xml" title="Daily Dose" href="/rss/daily_dose.xml" />
+<link rel="alternate" type="application/rss+xml" title="Author Interviews" href="/rss/author_interviews.xml" />
+<link rel="alternate" type="application/rss+xml" title="Author Essays" href="/rss/author_essays.xml" />
+<link rel="alternate" type="application/rss+xml" title="INK Q&amp;A" href="/rss/author_qanda.xml" />
+<link rel="alternate" type="application/rss+xml" title="Events Calendar" href="/cgi-bin/calendar.rss" />
+<link rel="alternate" type="application/rss+xml" title="The Bookcast at Powells.com" href="/bookcast/feed" />
+<link rel="alternate" type="application/rss+xml" title="PowellsBooks.Blog" href="/blog/wp-rss.php" />
+
+
+
+<style type="text/css">
+@import url(/css/style.css);
+
+@import url(/css/advanced_search.css);
+</style>
+
+
+   <!--[if IE]>
+   <style>
+      ul#nav li.spacer  { width:1.7%; }
+      ul#nav li ul { z-index:100;}
+      #margin ul li a {
+         /*display:inline-block;*/
+      }
+      #margin ul li a {
+         /*display:block;*/
+      }
+   </style>
+   <![endif]-->
+   
+   <!--[if IE 6]>
+   <style>
+   ul#nav li.over ul.left { /* lists nested under hovered list items */
+      left:-10px;
+   }
+
+   ul#nav li.over ul.right{ /* lists nested under hovered list items */
+      left:auto;      
+      right:-10px;
+   }
+
+   ul#nav li.over ul {
+      top:2.0em;
+      margin-top:6px;
+   }
+
+  
+
+   </style>
+   <![endif]-->
+   
+   <!--[if IE 7]>
+   <style>
+   ul#nav li.over ul.left { /* lists nested under hovered list items */
+      position:absolute;
+      left:-10px;
+   }
+
+   ul#nav li.over ul.right{ /* lists nested under hovered list items */
+      position:absolute;
+      left:auto;      
+      right:-10px;
+   }
+
+   ul#nav li.over ul {
+      position:absolute;
+      top:2.0em;
+      margin-top:6px;
+   }
+   </style>
+   <![endif]-->
+   
+   <!--[if lt IE 8]>
+   <style>
+   ol.table-style li {
+      display:inline;
+   }
+   #nav li.header ul li.divider {
+      border-bottom:1px dotted #4A3A2D;
+      margin-bottom:.25em;
+      padding-bottom:.75em;
+      margin-right:10px;
+   }
+   
+   #nav li.header ul hr {
+      display:none;
+   }
+   </style>
+   <![endif]-->
+
+
+<script src="/js/mootools.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+blue = new Array();
+   blue['dark']     = "#5F747E";
+   blue['medium']   = "#98B4C2";
+   blue['light']    = "#86A5B5";
+   blue['lightest'] = "#DAE4E9";
+
+brown = new Array();
+   brown['dark']   = "#4A3A2D";
+   brown['medium'] = "#B09B8A";
+   brown['light']  = "#EBE7DC";
+
+orange = new Array();
+   orange['dark'] = "#F07F24";
+
+white = new Array();
+   white['full'] = "#FFFFFF";
+   
+function startList() {  // Not being used - delete in a bit here... (10.16.2008)
+   if (document.all&&document.getElementById) {
+      navRoot = document.getElementById("nav");
+      for (i=0; i<navRoot.childNodes.length; i++) {
+         node = navRoot.childNodes[i];
+         if (node.nodeName=="LI") {
+            node.onmouseover=function() {
+               this.className+=" over";
+               this.style.zIndex=1000;
+               this.style.backgroundColor=brown['light'];
+            }
+            node.onmouseout=function() {
+               this.className=this.className.replace(" over", "");
+               this.style.zIndex = "";
+               this.style.backgroundColor="";
+            }
+         }
+      }
+   }
+}
+
+
+
+function start_list() {
+      for (i=0; i<$('nav').getChildren().length; i++) {
+         $('nav').getChildren()[i].addEvent('mouseover', function(){
+	        if (!this.hasClass('spacer')){
+	           this.addClass('over');
+	           this.setStyle('z-index', '1000');
+	           this.setStyle('background-color', brown['light']);
+	        }
+         });
+         
+         $('nav').getChildren()[i].addEvent('mouseout', function(){
+	        if (!this.hasClass('spacer')){
+	           this.removeClass('over');
+	           this.setStyle('z-index', '');
+	           this.setStyle('background-color', '');
+	        }
+         });
+
+      }
+}
+
+
+window.addEvent('domready',function(){
+   start_list();
+   //$$('img').addClass('scripted_invisible');
+   //show_images();
+});
+
+window.addEvent('scroll',function(){
+   //show_images();
+});
+
+function show_images() {
+   console.log('show_images() has been called.. fff');
+   console.log("here's all of 'em '%s'", $$('.scripted_invisible').getProperty('src'));
+   console.log("and here's the class of the first one '%s'", $$('.scripted_invisible')[0].getProperty('class'));
+   console.log("window_bottom(%s) i.e. %s - %s", window.getScrollTop().toInt() + window.getHeight().toInt(), window.getScrollTop().toInt(), window.getHeight().toInt());
+   console.log("img top '%s'", $$('.scripted_invisible')[0][0].getTop().toInt());
+   var images = $$('.scripted_invisible');
+   console.log('those images again: %s', images);
+   if ($$('.scripted_invisible')[0][0]) {
+      img = $$('.scripted_invisible')[0][0];
+      console.log("img src='%s'", img.GetProperty('src'));
+      img.removeClass('scripted_invisible');
+      window_bottom = window.getScrollTop().toInt() + window.getHeight().toInt();
+         if (img.getTop().toInt() < window_bottom) {
+            show_images();
+         } else {
+            return false;
+         }
+   }
+}
+   
+</script>
+
+<script type="text/javascript" src="/js/calendar.js"></script>
+
+<style type="text/css">
+/*.scripted_invisible {display:none;}*/
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<table id="header-menu" width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+      <td><img src="/images/clearpixel.gif" style="width:216px; height:1px;" id="top" /></td>
+      <td id="hello" class="row1">
+         <script>
+               document.write('<span id="display_name"></span>');
+               UserTrail.getDisplayName();
+            </script>
+         <a href="http://www.powells.com/cart?header=Shopping%20Cart"><img src="/images/header/cart.gif" alt="shopping cart" width="59" height="16" border="0" /></a>
+      </td>
+      <td><img src="/images/clearpixel.gif" style="width:150px; height:1px;" /></td>
+   </tr>
+   <tr>
+      <td id="logo" class="row2" style="width:216px;" width="216px"><a href="http://www.powells.com/home.html?header=Logo" style="margin:0; padding:0;"><img src="/images/header/powellsbooks_logo.gif" alt="Powell's Books in Portland, Oregon - est. 1971" border="0" height="63px" style="margin:0; padding:0;" /></a></td>
+      <td id="background-pic" class="row2"><img src='/images/clearpixel.gif' style='width:400px; height:5px;' /></td>
+      <td id="quick-links" class="row2" style="width:150px;" width="150px">
+         <ol>
+            <li><a href="http://www.powells.com/sys/securitypass.cgi?dest=/accountmaintenance.html&header=My%20Account">my account</a></li>
+            <li><a href="https://www.powells.com/cgi-bin/newsletters/list_manager?header=Newsletters">newsletters</a></li>
+            <li><a href="https://www.powells.com/cgi-bin/wishlist?e=1&header=Wish%20List">wish list</a></li>
+         </ol>
+      </td>
+   </tr>
+   <tr>
+      <td id="phone" class="row3"><a href="http://www.powells.com/info/phone.html?header=Phone%20Number"><img src="/images/header/call_us.gif" alt="Call us:  800-878-7323" width="170" height="11" border="0" /></a></td>
+      <td id="search" class="row3">
+         <form action="/s" method="GET">
+            <input type="hidden" name="header" value="Search Form" />
+            <!--<img src="/images/header/search.gif" width="66" height="14" title="search">-->
+            <b>SEARCH</b>
+            <input type="text" name="kw" id="search-box" style="margin:0 2px 0 0;" /><input type="submit" value="GO" title="go" id="search-button" style="margin:0; border:1px solid #5F747E;" />
+            <small><a href="http://www.powells.com/s?header=Advanced%20Search">advanced</a></small>
+         </form>
+      </td>
+      <td id="help" class="row3">
+         <a href="http://www.powells.com/info/help.html?header=Help">HELP<!--<img src="/images/header/help.gif" border="0" width="61" height="18" title="HELP">--></a>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="3" class="row4">
+         <ul id="nav">
+            <li class="spacer">&nbsp;</li>
+            <li class="header"><a href="http://www.powells.com/section?header=Browse%20by%20Subject" class="header-link">Browse&nbsp;by<br />Subject</a>
+               <ul class="left">
+<!--
+                  <li class="first"><a href="http://www.powells.com/section/Biography.html?header=Sub:%20Biography">Biography</a></li>
+-->
+                  <li><a href="http://www.powells.com/section/business.html?header=Sub:%20Business">Business</a></li>
+                  <li><a href="http://www.powells.com/section/CookingandFood.html?header=Sub:%20Cooking%20and%20Food">Cooking &amp; Food</a></li>
+                  <li><a href="http://www.powells.com/section/GayandLesbian.html?header=Sub:%20Gay%20and%20Lesbian">Gay &amp; Lesbian</a></li>
+                  <li><a href="http://www.powells.com/section/Childrens.html?header=Sub:%20Kids%20Books">Kids' Books</a></li>
+                  <li><a href="http://www.powells.com/section/Literature.html?header=Sub:%20Literature">Literature</a></li>
+                  <li><a href="http://www.powells.com/section/Mystery.html?header=Sub:%20Mystery">Mystery</a></li>
+                  <li><a href="http://www.powells.com/section/NewArrivals.html?header=Sub:%20New%20Arrivals">New Arrivals</a></li>
+                  <li><a href="http://www.powells.com/section/ScienceFictionandFantasy.html?header=Sub:%20Sci-Fi%20and%20Fantasy">Sci-Fi &amp; Fantasy</a></li>
+                  <li><a href="http://www.powells.com/section/technicalbooks.html?header=Sub:%20Technical%20Books">Technical Books</a></li>
+                  <li class='divider'><a href="http://www.powells.com/section/Textbooks.html?header=Sub:%20Textbooks">Textbooks</a></li>
+<hr>
+                  <li class="last"><a href="http://www.powells.com/section/section.html?header=Sub:%20See%20all%20subjects">See all subjects...</a></li></ul>
+            </li>
+            <li class="header"><a href="http://www.powells.com/usedsale?header=Used%20and%20Sale%20Books" class="header-link">Used &<br />Sale Books</a>
+               <ul class="left">
+                  <li class="first"><a href="http://www.powells.com/used?header=Sub:%20Used%20Books%20by%20Subject">Used Books by Subject</a></li>
+                  <li class='divider'><a href="https://www.powells.com/cgi-bin/newsletters/list_manager?ae=yes&header=Sub:%20Recently%20Arrived%20Used%20Book%20Alerts">Recently Arrived Used Book Alerts</a></li>
+                  <hr>
+                  <li><a href="http://www.powells.com/sale?header=Sub:%20Sale%20Books%20by%20Subject">Sale Books by Subject</a></li>
+                  <li><a href="http://www.powells.com/sub/NewFavoritesFiction.html?header=Sub:%20New%20Favorites%20Fiction">New Favorites: Fiction</a></li>
+                  <li><a href="http://www.powells.com/sub/NewFavoritesNonfiction.html?header=Sub:%20New%20Favorites%20Nonfiction">New Favorites: Nonfiction</a></li>
+               </ul>
+            </li>
+            <li class="header"><a href="http://www.powells.com/bestsellers.html?header=Picks%20and%20Bestsellers" class="header-link">Picks &<br />Bestsellers</a>
+               <ul class="left">
+                  <li class="first"><a href="http://www.powells.com/bestsellers.html?header=Sub:%20Bestsellers">Bestsellers</a></li>
+                  <li><a href="http://www.powells.com/picks?header=Sub:%20Staff%20Picks">Staff Picks</a></li>
+                  <li><a href="http://www.powells.com/sub/NewFavoritesFiction.html?header=Sub:%20New%20Favorites%20Fiction">New Favorites: Fiction</a></li>
+                  <li><a href="http://www.powells.com/sub/NewFavoritesNonfiction.html?header=Sub:%20New%20Favorites%20Nonfiction">New Favorites: Nonfiction</a></li>
+                  <li><a href="http://www.powells.com/sub/FeaturedTitlesSignedEditions.html?header=Sub:%20Signed%20Editions">Signed Editions</a></li>
+                  <li><a href="http://www.powells.com/review?header=Sub:%20Review-a-Day">Review-a-Day</a></li>
+                  <li><a href="http://www.powells.com/features/dailydose.html?header=Sub:%20Daily%20Dose">Daily Dose</a></li> 
+                  <li><a href="http://www.powells.com/prizes/prizes.html?header=Sub:%20Award%20Winners">Award Winners</a></li>
+                  <li><a href="http://www.powells.com/indiespensable?header=Sub:%20Indiespensable">Indiespensable&trade;</a></li>
+               </ul>
+            </li>
+ 
+
+            <li class="header"><a href="http://www.powells.com/blog?header=Interviews%20Essays%20and%20Blog" class="header-link">Interviews,<br />Essays & Blog</a>
+               <ul class="left">
+                  <li class="first"><a href="http://www.powells.com/blog?header=Sub:%20The%20Powells%20Blog">The Powell's Blog</a></li>
+                  <li><a href="http://www.powells.com/interviews?header=Sub:%20Author%20Interviews">Author Interviews</a></li>
+                  <li><a href="http://www.powells.com/essays?header=Sub:%20Author%20Essays">Author Essays</a></li>
+                  <li><a href="http://www.powells.com/ink?header=Sub:%20Author%20Q%20and%20As">Author Q&amp;As</a></li>
+                  <li><a href="http://www.powells.com/ootb?header=Sub:%20Out%20of%20the%20Book%20Films">Out of the Book&trade; Films</a></li>
+                  <li><a href="http://www.powells.com/fup?header=Sub:%20Fup%20Store%20Cat">Fup. Store Cat.</a></li>
+                </ul>
+            </li>
+
+           <li class="header"><a href="http://www.powells.com/powellscard.html?header=Gift%20Cards%20and%20Souvenirs" class="header-link"> Gift&nbsp;Cards&nbsp;&amp;<br />Souvenirs</a>
+              <ul class="left">
+                  <li class="first"><a href="http://www.powells.com/powellscard.html?header=Sub:%20Gift%20Cards">Gift Cards</a></li>
+<!--
+                  <li><a href="http://www.powells.com/sub/GiftIdeasPowellsGiftPacks.html?header=Sub:%20Powells%20Gift%20Packs">Powell's Gift Packs</a></li>
+-->
+                  <li><a href="http://www.powells.com/features/souvenir.html?header=Sub:%20Powells%20Souvenirs">Powell's Souvenirs</a></li>
+                  <li><a href="http://www.powells.com/section/MoleskineNotebooks.html?header=Sub:%20Moleskine%20Notebooks">Moleskine Notebooks</a></li>
+
+              </ul>
+            </li>
+
+            <li class="header"><a href="http://www.powells.com/sell?header=Sell%20Us%20Your%20Books" class="header-link">Sell&nbsp;Us<br />Your&nbsp;Books</a>
+               <ul class="right">
+                  <li class="first"><a href="http://www.powells.com/sellonline?header=Sub:%20Sell%20Books%20Online">Sell Books Online</a></li>
+                  <li><a href="http://www.powells.com/info/buying.html?header=Sub:%20Sell%20Books%20in%20our%20Stores">Sell Books in our Stores</a></li>
+                  <li><a href="http://www.powells.com/buyback?header=Sub:%20Sell%20Books%20at%20our%20NW%20Warehouse">Sell Books at our NW Warehouse</a></li>
+               </ul>
+             </li>
+             <li class="header" id="last"><a href="http://www.powells.com/info/storeinformation.html?header=Stores%20and%20Events" class="header-link">Stores<br />& Events</a>
+               <ul class="right">
+                  <li class="first"><a href="http://www.powells.com/info/places/burnsideinfo.html?header=Sub:%20City%20of%20Books%20on%20Burnside">City of Books on Burnside</a></li>
+                  <li><a href="http://www.powells.com/info/places/technicalinfo.html?header=Sub:%20Technical%20Books">Technical Books</a></li>
+                  <li><a href="http://www.powells.com/info/places/beavertoninfo.html?header=Sub:%20Cedar%20Hills%20Crossing">Cedar Hills Crossing</a></li>
+                  <li><a href="http://www.powells.com/info/places/hawthorneinfo.html?header=Sub:%20Hawthorne">Hawthorne</a></li>
+                  <li><a href="http://www.powells.com/info/places/homeandgardeninfo.html?header=Sub:%20Home%20and%20Garden">Home and Garden</a></li>
+                  <li class='divider'><a href="http://www.powells.com/info/places/airportinfo.html?header=Sub:%20Portland%20Airport">Portland Airport</a></li>
+                  <hr>
+                  <li><a href="http://www.powells.com/calendar.html?header=Sub:%20Events%20Calendar">Events Calendar</a></li>
+                  <li><a href="http://www.powells.com/portland/?header=Sub:%20Portlanders%20Page">Portlanders' Page</a></li>
+               </ul>
+            </li>
+            <li class="spacer" id="spacer2">&nbsp;</li>
+         </ul>
+      </td>
+   </tr>
+</table>
+
+<div id="wrapper">
+
+<table border='0' cellpadding='0' cellspacing='0' id='page-structure'>
+<tr>
+<td>
+
+  
+</td><td><!-- this cell intentionally left blank --></td>
+ 
+<tr><td id="margin" width="1%">
+
+<div id="scanalert">
+
+<!-- START SCANALERT CODE -->
+<a target="_blank" href="https://www.scanalert.com/RatingVerify?ref=www.powells.com"><img width="115" height="30" border="0" src="//images.scanalert.com/meter/www.powells.com/32.gif" alt="McAfee SECURE helps keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams." oncontextmenu="alert('Copying Prohibited by Law - McAfee SECURE is a Trademark of ScanAlert'); return false;" /></a>
+<!-- END SCANALERT CODE -->
+
+         </div>
+
+<div id="dontmiss">
+<h4><img src="/images/margin/dontmiss.gif" style="float: left; margin-right: 3px;">Don't Miss</h4>
+            
+<ul>
+<li><a href="/sub/FeaturedTitlesPortlandFarmersMarket.html?margin=Portland%20Farmers%20Market">Powell's Books<br />at Portland Farmers Market</a></li>
+<li><a href="/sub/TaschenSpringSale.html?margin=Taschen%20Spring%20Sale">Taschen Spring Sale</a></li>
+<li><a href="/sub/LonelyPlanetTrips.html?margin=Lonely%20Planet%20Trips">Lonely Planet Trips: Save 30%</a></li>
+<li><a href="/biblio?isbn=9780385736008">Free Download: The Alchemyst</a></li>
+<li><a href="/indiespensable?margin=Indiespensable">Indiespensable<small>&trade;</small>: A Reliable Wife</a></li>
+</ul> 
+
+<h4>More at Powell's</h4>
+<ul id="margin_inline">
+<li><a href="/sub/FeaturedTitlesSignedEditions.html?margin=Featured%20Signed%20Editions">Featured Signed Editions</a>
+<li><a href="/section/RareBooks.html?margin=Rare%20and%20Collectible%20Books" style="display:inline;">Rare and Collectible Books</a></li>
+<li><a href="/ebookstore/ebooks.html?margin=eBooks" style="display:inline;">eBooks</a> | <a href="/section/AudioBooks.html?margin=Audio%20Books" style="display:inline;">Audio</a> | <a href="/section/dvds.html?margin=DVDs" style="display:inline;">DVDs</a> | <a href="/section/Bluray.html?margin=Blu-ray" style="display:inline;">Blu-ray</a></li> 
+</ul>
+<hr>
+</div>
+
+
+      <h4>View Results by Class</h4>
+      <ul>
+         <li><a href="s3?class=new&kw=chess&start=1" alt='New'>New<!--&nbsp;(2476)--></a></li>         
+         <li><a href="s3?class=used&kw=chess&start=1" alt='Used'>Used<!--&nbsp;(1117)--></a></li>         
+         <li><a href="s3?class=NYR&kw=chess&start=1" alt='Not Yet Released'>Not&nbsp;Yet&nbsp;Released<!--&nbsp;()--></a></li>                  
+         <li><a href="s3?class=adobe%20digital%20editions&kw=chess&start=1" alt='Adobe Digital Editions'>Adobe&nbsp;Digital&nbsp;Editions<!--&nbsp;()--></a></li>         
+         <li><a href="s3?class=sale&kw=chess&start=1" alt='Sale'>Sale<!--&nbsp;(164)--></a></li>                  
+      </ul>
+<hr>      <h4>View Results by Section</h4>
+      <ul>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Adobe%20Digital%20Editions" alt="Adobe Digital Editions">Adobe Digital Editions<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Anthologies" alt="Anthologies">Anthologies<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Antiques" alt="Antiques">Antiques<!--&nbsp;(2)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Art" alt="Art">Art<!--&nbsp;(4)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Audio%20Books" alt="Audio Books">Audio Books<!--&nbsp;(8)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Biography" alt="Biography">Biography<!--&nbsp;(13)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Biology" alt="Biology">Biology<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Botany" alt="Botany">Botany<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Business" alt="Business">Business<!--&nbsp;(12)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Careers" alt="Careers">Careers<!--&nbsp;(2)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Chemistry" alt="Chemistry">Chemistry<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Child%20Care%20and%20Parenting" alt="Child Care and Parenting">Child Care and Parenting<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Child%20Psychology" alt="Child Psychology">Child Psychology<!--&nbsp;(2)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's" alt="Children's">Children's<!--&nbsp;(2)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's%20Activities" alt="Children's Activities">Children's Activities<!--&nbsp;(4)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's%20Animals" alt="Children's Animals">Children's Animals<!--&nbsp;(4)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's%20Art" alt="Children's Art">Children's Art<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's%20Nonfiction" alt="Children's Nonfiction">Children's Nonfiction<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's%20Picture%20Books" alt="Children's Picture Books">Children's Picture Books<!--&nbsp;(4)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Children's%20Young%20Adult" alt="Children's Young Adult">Children's Young Adult<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Computers%20Reference" alt="Computers Reference">Computers Reference<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Crafts" alt="Crafts">Crafts<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Drama" alt="Drama">Drama<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=DRM-Free%20PDF" alt="DRM-Free PDF">DRM-Free PDF<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=DVDs" alt="DVDs">DVDs<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Education" alt="Education">Education<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Exams" alt="Exams">Exams<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Feminist%20Studies" alt="Feminist Studies">Feminist Studies<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Foreign%20Languages" alt="Foreign Languages">Foreign Languages<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Games" alt="Games">Games<!--&nbsp;(91)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=General" alt="General">General<!--&nbsp;(73)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Graphic%20Novels" alt="Graphic Novels">Graphic Novels<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Health%20and%20Medicine" alt="Health and Medicine">Health and Medicine<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=History%20of%20Science" alt="History of Science">History of Science<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Humor" alt="Humor">Humor<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Internet" alt="Internet">Internet<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Judaism" alt="Judaism">Judaism<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Large%20Print" alt="Large Print">Large Print<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Law" alt="Law">Law<!--&nbsp;(4)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Literary%20Criticism" alt="Literary Criticism">Literary Criticism<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Literature" alt="Literature">Literature<!--&nbsp;(72)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Mathematics" alt="Mathematics">Mathematics<!--&nbsp;(2)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Microsoft%20Reader%20eBooks" alt="Microsoft Reader eBooks">Microsoft Reader eBooks<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Music" alt="Music">Music<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Mystery" alt="Mystery">Mystery<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Nature%20Studies" alt="Nature Studies">Nature Studies<!--&nbsp;(2)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Networking" alt="Networking">Networking<!--&nbsp;(4)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Palm%20Reader%20eBooks" alt="Palm Reader eBooks">Palm Reader eBooks<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Pets" alt="Pets">Pets<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Philosophy" alt="Philosophy">Philosophy<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Poetry" alt="Poetry">Poetry<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Popular%20Fiction" alt="Popular Fiction">Popular Fiction<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Psychology" alt="Psychology">Psychology<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Rare%20Books" alt="Rare Books">Rare Books<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Reference" alt="Reference">Reference<!--&nbsp;(3)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Religion%20Western" alt="Religion Western">Religion Western<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Science%20Fiction%20and%20Fantasy" alt="Science Fiction and Fantasy">Science Fiction and Fantasy<!--&nbsp;(5)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Science%20Reference" alt="Science Reference">Science Reference<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Self%20Help" alt="Self Help">Self Help<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Software%20Engineering" alt="Software Engineering">Software Engineering<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Sports%20and%20Fitness" alt="Sports and Fitness">Sports and Fitness<!--&nbsp;(19)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Travel" alt="Travel">Travel<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=US%20History" alt="US History">US History<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=Western%20Civilization" alt="Western Civilization">Western Civilization<!--&nbsp;(1)--></a></li>
+         <li><a href="s3?kw=chess&start=1&vaguesection=World%20History" alt="World History">World History<!--&nbsp;(23)--></a></li>
+      </ul>
+<hr>
+ 
+<div class='author-pod'>
+<p>
+<a href="/essays/michellegoldberg.html"><img src="/images/michellegoldberg70.jpg" alt="Michelle Goldberg" width="70" border="0" class='portrait left' /></a>
+
+Read an <a href="/essays/michellegoldberg.html">original essay</a> by Michelle Goldberg and <b>save 30%</b> on <a href='/biblio?show=hardcover:sale:9781594202087:18.16' title='The Means of Reproduction'>The Means of Reproduction</a>
+</p>
+
+<ol class='booklist table-style' style='clear:both;'>
+<li>
+<span class="width-fixer">
+<a class='coverlink' href='/biblio?show=hardcover:sale:9781594202087:18.16' title='The Means of Reproduction'><img src='/cgi-bin/imageDB.cgi?isbn=9781594202087&t=80' style='width:80px' alt='The Means of Reproduction' class='bookcover left' /></a>
+<div class='price-cart'>
+<big class='price'><small>$</small>18.16</big>
+<small>Hardcover</small>
+<a href='/cgi-bin/Shopping_cart?add=hardcover:sale:9781594202087:18.16&where=60' title='Add &quot;The Means of Reproduction&quot; to your Shopping Cart'>
+<img src='/images/buttons/addtocart82.gif' style='border:0;' 
+class='add-to-cart-button' /></a>
+<small><a href='/cgi-bin/wishlist?add=9781594202087' class='wishlist'>add to wishlist</a></small></div>
+<div class='book-info'>
+<h3 class='book-title'><a href='/biblio?show=hardcover:sale:9781594202087:18.16' title='The Means of Reproduction'>The Means of Reproduction: Sex, Power, and the Future of the World</a></h3>
+<cite>Michelle Goldberg</cite>
+</div></span></li>
+</ol>
+</div>
+
+<hr>
+
+<img src='/images/clearpixel.gif' style='width:216px; height:1px;' width='216px' height='1px'></td>
+<td id="content" width="99%">
+
+
+<p>You searched for:     <dfn title='keyword=&quot;chess&quot;'>chess</dfn>.
+   
+   <a href="javascript:toggle_search_options('advanced_search', 'link_1');" title='View advanced search options'>Refine your search</a>.   
+   </p>
+
+
+
+   <div id='FPSearch'>
+         <b>Browse sections  related to 'chess':</b>
+                  
+         <p>
+                        &nbsp;&bull; <a href='/sub/GamesChess.html'>Games - Chess</a>            <br />            &nbsp;&bull; <a href='/sub/GamesGameHintsChess.html'>Games - Game Hints Chess</a>            <br />            &nbsp;&bull; <a href='/sub/GamesBeginningChess.html'>Games - Beginning Chess</a>                     
+         </p>  
+   </div>
+   
+   
+
+         </p><style>
+
+div#pagination label#sort_by_menubar_select_label {
+   display:inline;
+   width:auto;
+   }
+	
+</style>
+
+<div id='pagination'>
+   <small class='results'>   Results 
+   <b> 1-25 </b>
+   of 
+   <b>1846</b>
+<!--
+ for &nbsp; 
+   
+    <dfn title='keyword=&quot;chess&quot;'>chess</dfn>
+
+ . 
+
+-->   </small>
+
+   <span class='page_nav'>          &laquo;&nbsp;prev                                   <b>1</b>                           <a href="s3?kw=chess&start=26" >2</a>                           <a href="s3?kw=chess&start=51" >3</a>                           <a href="s3?kw=chess&start=76" >4</a>                           <a href="s3?kw=chess&start=101" >5</a>             &nbsp;&hellip;&nbsp;
+      <a href="s3?kw=chess&start=1826" >74</a>
+            <a href="s3?kw=chess&start=26"  class='prev_next'>
+         next&nbsp;&raquo;
+      </a>
+   </span>
+
+   <small class='sort'>   <form action='/s3' method='GET'>            <input type='hidden' 
+                   name='kw'  
+                   id='kw' 
+                   value='chess'
+            >
+
+            <label for='sort_by_menubar' id='sort_by_menubar_select_label'            >Sort&nbsp;By            
+
+            <select name='sort' 
+                   id='sort_by_menubar' onChange='this.form.submit();'>
+                  <option value='by_relevance' selected >Relevance</option>
+                  <option value='by_title' >Title A-Z</option>
+                  <option value='by_title_reverse' >Title Z-A</option>
+                  <option value='by_author' >Author A-Z</option>
+                  <option value='by_author_reverse' >Author Z-A</option>
+                  <option value='by_price' >Price Low-High</option>
+                  <option value='by_price_reverse' >Price High-Low</option>
+                  <option value='by_received_date_reverse' >Received Date</option>
+            </select>
+            </label>
+   </form>   </small>
+</div>   <script type='text/javascript' src='/js/advanced_search.js'></script>
+<script src="http://books.google.com/books/previewlib.js"></script>
+
+
+<style>
+@import url(/css/lists.css);
+</style>
+   <div id='advanced_options'>
+      <a href="s3?adv=advanced&kw=chess" 
+         onClick="javascript:toggle_search_options('advanced_search', 'link_1');return false;" 
+         class="menu_link " 
+         id='link_1'
+      >advanced search</a>
+      &nbsp;
+      <a href="s3?adv=isbn&kw=chess" 
+         onClick="javascript:toggle_search_options('isbn_search', 'link_2');return false;" 
+         class="menu_link " 
+         id='link_2'
+      >isbn search</a>
+   </div>
+<!--[if IE]>
+   <style>
+   ol.form_list li {
+      margin-bottom:-1px;
+      margin-top:0;
+   }
+   </style>
+<![endif]-->
+   
+   <div id='advanced_search' 
+        class='search invisible'
+   ><p style='background-color:white;'><a href='/info/searchhelp.html' class='help'>Search Tips</a>&nbsp;</p>
+   <form id="adv_search_form" name="adv_search_form" action="/s3" method="GET">
+   <ol id='advanced_search_list' class='form-list'
+  ><li class="column1">
+              <label for="kw_adv" class='filled-in'            >Keyword/ISBN            <input type="text" name="kw" 
+                   id='kw_adv' 
+                   value="chess"onChange='unflag(this);' /></label>  
+  </li
+  ><li class="column1">
+              <label for="title_adv"            >Title            <input type="text" name="title" 
+                   id='title_adv' 
+                   value=""onChange='unflag(this);' /></label>  
+  </li
+  ><li class="column1">
+
+
+            <label for='exact_title_adv' id='exact_title_adv_checkbox_label'            >
+
+            <input type='checkbox' 
+                   name='exact_title' 
+                   id='exact_title_adv' 
+                   value='1'  onChange='unflag(this);'                   style="width:1em;">
+Exact Title?
+            </label>
+  
+  
+  </li
+  ><li class="column1">
+              <label for="author_adv"            >Author            <input type="text" name="author" 
+                   id='author_adv' 
+                   value=""onChange='unflag(this);' /></label>  
+  </li
+  ><li class="column1">
+              <label for="publisher_adv"            >Publisher            <input type="text" name="publisher" 
+                   id='publisher_adv' 
+                   value=""onChange='unflag(this);' /></label>  
+  </li
+  ><li class="column1">
+              <label for="section_adv"            >Section            <input type="text" name="section" 
+                   id='section_adv' 
+                   value=""onChange='unflag(this);' /></label>  
+  </li
+
+  ><li class="column2 reset">
+  
+            <label for='class_adv' id='class_adv_select_label'            >Class            
+
+            <select name='class' 
+                   id='class_adv' onChange='unflag(this);'>
+                  <option value='0' selected >All</option>
+                  <option value='new' >New</option>
+                  <option value='used' >Used</option>
+                  <option value='sale' >Sale</option>
+                  <option value='usedsale' >Used and Sale</option>
+                  <option value='rare' >Rare and Collectible</option>
+                  <option value='adobe digital editions' >Adobe Digital Editions</option>
+                  <option value='microsoft reader ebooks' >Microsoft Reader eBooks</option>
+                  <option value='palm reader ebooks' >Palm Reader eBooks</option>
+                  <option value='drm free pdf' >DRM-Free PDF</option>
+                  <option value='NYR' >Not Yet Released</option>
+            </select>
+            </label>
+  
+  </li
+  ><li class="column2">
+  
+            <label for='binding_adv' id='binding_adv_select_label'            >Binding&nbsp;Type            
+
+            <select name='binding' 
+                   id='binding_adv' onChange='unflag(this);'>
+                  <option value='0' selected >All</option>
+                  <option value='paper' >Paperback (All)</option>
+                  <option value='trade paper' >Paperback (Trade Paper)</option>
+                  <option value='mass market' >Paperback (Mass Market)</option>
+                  <option value='hardcover' >Hardcover</option>
+                  <option value='dvd' >DVD</option>
+                  <option value='blu-ray' >Blu-ray</option>
+                  <option value='video' >Video</option>
+                  <option value='allaudio' >Audio (all formats)</option>
+                  <option value='electronic' >Electronic</option>
+                  <option value='leather' >Leather</option>
+                  <option value='board books' >Board Book</option>
+            </select>
+            </label>
+  
+  </li
+  ><li class="column2">
+  
+            <label for='sort_by_adv' id='sort_by_adv_select_label'            >Sort&nbsp;By            
+
+            <select name='sort' 
+                   id='sort_by_adv' onChange='unflag(this);'>
+                  <option value='by_relevance' selected >Relevance</option>
+                  <option value='by_title' >Title A-Z</option>
+                  <option value='by_title_reverse' >Title Z-A</option>
+                  <option value='by_author' >Author A-Z</option>
+                  <option value='by_author_reverse' >Author Z-A</option>
+                  <option value='by_price' >Price Low-High</option>
+                  <option value='by_price_reverse' >Price High-Low</option>
+                  <option value='by_received_date_reverse' >Received Date</option>
+            </select>
+            </label>
+  
+  </li
+  ><li class="column2">
+  
+            <label for='location_adv' id='location_adv_select_label'            >Store&nbsp;Location            
+
+            <select name='location' 
+                   id='location_adv' onChange='unflag(this);'>
+                  <option value='0' selected >All Stores</option>
+                  <option value='Burnside' >Burnside</option>
+                  <option value='Beaverton' >Beaverton</option>
+                  <option value='Technical' >Technical</option>
+                  <option value='Home &amp; Garden' >Home & Garden</option>
+                  <option value='Hawthorne' >Hawthorne</option>
+                  <option value='Airport' >Airport</option>
+                  <option value='Partner Warehouse' >Partner Warehouse</option>
+                  <option value='Local Warehouse' >Local Warehouse</option>
+                  <option value='International Warehouse' >International Warehouse</option>
+                  <option value='Remote Warehouse' >Remote Warehouse</option>
+                  <option value='Ebook Store' >Ebook Store</option>
+            </select>
+            </label>
+  
+  </li
+  ><li class="column2">
+  
+            <label for='days_old_adv' id='days_old_adv_select_label'            >Arrived Within            
+
+            <select name='received_date' 
+                   id='days_old_adv' onChange='unflag(this);'>
+                  <option value='0' selected >No Preference</option>
+                  <option value='1' >One Week</option>
+                  <option value='2' >Two Weeks</option>
+            </select>
+            </label>
+  
+  </li
+  ><li class="column2">
+ 
+            <label for='per_page_adv' id='per_page_adv_select_label'            >Items&nbsp;Per&nbsp;Page            
+
+            <select name='perpage' 
+                   id='per_page_adv' onChange='UserPrefs.setPref("search_perpage",this.value);' >
+                  <option value='10' >10</option>
+                  <option value='25' selected >25</option>
+                  <option value='100' >100</option>
+                  <option value='250' >250</option>
+            </select>
+            </label>
+  
+  </li
+  ><li class="column2" style="padding:1em;">
+
+   <input type="submit" value="search" class="button" onClick="show_loader();" id="adv-search-button" />
+   <input type="reset" value="clear" class="button" onClick="empty_form('adv_search_form'); return false;" id="adv-clear-button" />
+                  
+                  </li
+></ol>
+ </div> 
+ 
+ <!-- isbn search -->
+ 
+ 
+   <div id='isbn_search'
+        class='search invisible'
+   >
+   <script type="text/javascript" src="/js/isbn.js"></script>
+   <p><a href='/info/searchhelp.html' class='help'>Search Tips</a>&nbsp;</p>
+   <form id="isbn_search_form" name="isbn_search_form" action="/s3" method="GET" onSubmit="return isbnUtils.checkList('isbn', 'isbn_warning');" >
+      <ol class="form-list">
+         <li style='height:200px'>
+            <label for="isbn" id="isbn_label" >ISBN(s)</label>
+            <textarea name="isbn" id="isbn" style='height:190px;' onclick='$("isbn_label").removeClass("filled-in");'></textarea>
+         </li>
+         
+         <li style='height:auto;'>
+            <ol class='message warning' id='isbn_warning' style='display:none;'>
+               This will be where the error message lives (i.e. "We could help you a lot more if you gave us an isbn number.")
+            </ol>
+         </li>
+                     
+         <li style="padding:1em;">
+<input type="submit" value="search" class="button" onClick="show_loader();" id="isbn-search-button" />
+<input type="reset" value="clear" class="button" onClick="empty_form('isbn_search_form'); return false;" id="isbn-clear-button" />
+         </li>
+         
+      </ol>  
+   </form> 
+</div>  <script type='text/javascript'>
+function list_add(isbn, list_type) {
+hide_div('example');
+
+var el = new Element("div");
+
+new Ajax('/php/cj/build_partner_list.php?isbn='+isbn, {
+	method: 'get',
+	update: 'example',
+	onComplete: function(){
+		console.log('ajax complete!');
+			$('example').setStyles({
+				'right':'5px',
+				'top':(window.getScrollTop()+5) + 'px'
+				}
+			);
+		}
+}).request();
+
+}
+
+function hide_div(which_div) {
+$(which_div).setStyles({
+				'top':'-10000px'
+				}
+			);
+}
+
+
+
+</script>
+<div id='example' style='position:absolute;top:-100000px; z-index:500; background:white; background-color:white;width:350px;border:2px solid #ccc;
+	background:white;
+	background-color:white;
+	padding:5px;'></div>
+
+<style>
+@import url(/css/lists.css);
+</style>
+
+<ol class='booklist search border-bottom'>
+   <li class=''>
+      <small class='counter'>1</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9780691137780-0' title='The Posthuman Dada Guide: Tzara &amp; Lenin Play Chess (Public Square)'><img src='http://content-0.powells.com/cgi-bin/imageDB.cgi?isbn=9780691137780&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780691137780');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9780691137780-0' title='The Posthuman Dada Guide: Tzara &amp; Lenin Play Chess (Public Square)'>The Posthuman Dada Guide: Tzara &amp; Lenin Play Chess (Public Square)</a></h3>  
+      <div class='book-info'>
+         <div><cite>Andrei Codrescu</cite>&nbsp;/&nbsp;Princeton University Press</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Literature - A to Z
+         </div>
+         <div class='more-info'><a href='/biblio/1-9780691137780-0' title='The Posthuman Dada Guide: Tzara &amp; Lenin Play Chess (Public Square)'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$16.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9780691137780-0&where=24' title='Add &quot;The Posthuman Dada Guide: Tzara &amp; Lenin Play Chess (Public Square)&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/1-9780691137780-1?search_avail=1'>New&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>2</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/7-9789056912031-0' title='Chess Opening Essentials #1: Chess Opening Essentials Volume 1: The Complete 1.E4'><img src='http://content-1.powells.com/cgi-bin/imageDB.cgi?isbn=9789056912031&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9789056912031');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/7-9789056912031-0' title='Chess Opening Essentials #1: Chess Opening Essentials Volume 1: The Complete 1.E4'>Chess Opening Essentials #1: Chess Opening Essentials Volume 1: The Complete 1.E4</a></h3>  
+      <div class='book-info'>
+         <div><cite>Komarov Djuric</cite>&nbsp;/&nbsp;New In Chess</div>
+         <div>
+            Sale Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/7-9789056912031-0' title='Chess Opening Essentials #1: Chess Opening Essentials Volume 1: The Complete 1.E4'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$11.98 <span class='list-price'><small><strike>$29.95</strike></small></span></big>
+                  <a href='/cgi-bin/Shopping_cart?add=7-9789056912031-0&where=24' title='Add &quot;Chess Opening Essentials #1: Chess Opening Essentials Volume 1: The Complete 1.E4&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9789056912031-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/2-9789056912031-0?search_avail=1'>Sale&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>3</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/2-9780316326599-1' title='Slugs'><img src='http://content-9.powells.com/cgi-bin/imageDB.cgi?isbn=9780316326599&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780316326599');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/2-9780316326599-1' title='Slugs'>Slugs</a></h3>  
+      <div class='book-info'>
+         <div><cite>David Greenberg and Victoria Chess</cite>&nbsp;/&nbsp;Megan Tingley Books</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Children's - Poetry
+         </div>
+         <div class='more-info'><a href='/biblio/2-9780316326599-1' title='Slugs'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$4.50</big>
+                  <a href='/cgi-bin/Shopping_cart?add=2-9780316326599-1&where=24' title='Add &quot;Slugs&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/1-9780316326599-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/7-9780316326599-5?search_avail=1'>Used&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>4</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9789056911683-2' title='Van Perlo's Endgame Tactics: A Comprehensive Guide to the Sunny Side of Chess Endgames'><img src='http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=9789056911683&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9789056911683');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9789056911683-2' title='Van Perlo's Endgame Tactics: A Comprehensive Guide to the Sunny Side of Chess Endgames'>Van Perlo's Endgame Tactics: A Comprehensive Guide to the Sunny Side of Chess Endgames</a></h3>  
+      <div class='book-info'>
+         <div><cite>Van Perlo</cite>&nbsp;/&nbsp;New In Chess</div>
+         <div>
+            Sale Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/1-9789056911683-2' title='Van Perlo's Endgame Tactics: A Comprehensive Guide to the Sunny Side of Chess Endgames'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$11.98</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9789056911683-2&where=24' title='Add &quot;Van Perlo's Endgame Tactics: A Comprehensive Guide to the Sunny Side of Chess Endgames&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9789056911683-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/2-9789056911683-1?search_avail=1'>Sale&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>5</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/17-9780553263152-1' title='Bobby Fischer Teaches Chess'><img src='http://content-2.powells.com/cgi-bin/imageDB.cgi?isbn=9780553263152&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780553263152');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/17-9780553263152-1' title='Bobby Fischer Teaches Chess'>Bobby Fischer Teaches Chess</a></h3>  
+      <div class='book-info'>
+         <div><cite>Bobby Fischer</cite>&nbsp;/&nbsp;Bantam Books</div>
+         <div>
+            Used Mass Market
+            &nbsp;/&nbsp;
+            Games - Beginning Chess
+         </div>
+         <div class='more-info'><a href='/biblio/17-9780553263152-1' title='Bobby Fischer Teaches Chess'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$3.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=17-9780553263152-1&where=24' title='Add &quot;Bobby Fischer Teaches Chess&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/1-9780553263152-0?search_avail=1'>New&nbsp;Mass Market</a>
+         <a href='/biblio/71-9781439507032-0?search_avail=1'>New&nbsp;Prebind</a>
+         <a href='/biblio/1-9780553263152-12?search_avail=1'>Used&nbsp;Mass Market</a>
+         <a href='/biblio/1-9781121225657-1?search_avail=1'>Used&nbsp;Hardcover</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>6</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9780671679248-1' title='The Pocket Book of Chess'><img src='/images/noimage120.gif' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780671679248');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9780671679248-1' title='The Pocket Book of Chess'>The Pocket Book of Chess</a></h3>  
+      <div class='book-info'>
+         <div><cite>Raymond D Keene</cite>&nbsp;/&nbsp;Aladdin Paperbacks</div>
+         <div>
+            Sale Trade Paper
+            &nbsp;/&nbsp;
+            Games - Beginning Chess
+         </div>
+         <div class='more-info'><a href='/biblio/1-9780671679248-1' title='The Pocket Book of Chess'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$4.98</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9780671679248-1&where=24' title='Add &quot;The Pocket Book of Chess&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/2-9780671679248-1?search_avail=1'>Sale&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>7</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/2-9780671659721-2' title='Weapons of Chess: An Omnibus of Chess Strategies (Fireside Chess Library)'><img src='http://content-1.powells.com/cgi-bin/imageDB.cgi?isbn=9780671659721&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780671659721');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/2-9780671659721-2' title='Weapons of Chess: An Omnibus of Chess Strategies (Fireside Chess Library)'>Weapons of Chess: An Omnibus of Chess Strategies (Fireside Chess Library)</a></h3>  
+      <div class='book-info'>
+         <div><cite>Bruce Pandolfini</cite>&nbsp;/&nbsp;Fireside Books</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/2-9780671659721-2' title='Weapons of Chess: An Omnibus of Chess Strategies (Fireside Chess Library)'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$7.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=2-9780671659721-2&where=24' title='Add &quot;Weapons of Chess: An Omnibus of Chess Strategies (Fireside Chess Library)&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9780671659721-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/7-9780671659721-0?search_avail=1'>Used&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>8</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/61-9780743226172-0' title='Pandolfini's Ultimate Guide to Chess'><img src='http://content-2.powells.com/cgi-bin/imageDB.cgi?isbn=9780743226172&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780743226172');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/61-9780743226172-0' title='Pandolfini's Ultimate Guide to Chess'>Pandolfini's Ultimate Guide to Chess</a></h3>  
+      <div class='book-info'>
+         <div><cite>Bruce Pandolfini</cite>&nbsp;/&nbsp;Fireside Books</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/61-9780743226172-0' title='Pandolfini's Ultimate Guide to Chess'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$15.00</big>
+                  <a href='/cgi-bin/Shopping_cart?add=61-9780743226172-0&where=24' title='Add &quot;Pandolfini's Ultimate Guide to Chess&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/72-9780743226172-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>9</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/2-9780385510103-2' title='The Immortal Game: A History of Chess, or How 32 Carved Pieces on a Board Illuminated Our Understanding of War, Art, Science and the Huma'><img src='http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=9780385510103&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780385510103');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/2-9780385510103-2' title='The Immortal Game: A History of Chess, or How 32 Carved Pieces on a Board Illuminated Our Understanding of War, Art, Science and the Huma'>The Immortal Game: A History of Chess, or How 32 Carved Pieces on a Board Illuminated Our Understanding of War, Art, Science and the Huma</a></h3>  
+      <div class='book-info'>
+         <div><cite>David Shenk</cite>&nbsp;/&nbsp;Doubleday Books</div>
+         <div>
+            Used Hardcover
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/2-9780385510103-2' title='The Immortal Game: A History of Chess, or How 32 Carved Pieces on a Board Illuminated Our Understanding of War, Art, Science and the Huma'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$14.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=2-9780385510103-2&where=24' title='Add &quot;The Immortal Game: A History of Chess, or How 32 Carved Pieces on a Board Illuminated Our Understanding of War, Art, Science and the Huma&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/62-9780739340042-0?search_avail=1'>New&nbsp;Compact Disc</a>
+         <a href='/biblio/1-9780385510103-2?search_avail=1'>Used&nbsp;Hardcover</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>10</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9780143114369-2' title='The Chess Machine'><img src='http://content-9.powells.com/cgi-bin/imageDB.cgi?isbn=9780143114369&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780143114369');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9780143114369-2' title='The Chess Machine'>The Chess Machine</a></h3>  
+      <div class='book-info'>
+         <div><cite>Robert Lohr</cite>&nbsp;/&nbsp;Penguin Books</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Literature - A to Z
+         </div>
+         <div class='more-info'><a href='/biblio/1-9780143114369-2' title='The Chess Machine'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$9.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9780143114369-2&where=24' title='Add &quot;The Chess Machine&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9781400155132-0?search_avail=1'>New&nbsp;Mp3 Cd</a>
+         <a href='/biblio/62-9781400105137-0?search_avail=1'>New&nbsp;Compact Disc</a>
+         <a href='/biblio/1-9780143114369-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/61-9781594201264-0?search_avail=1'>New&nbsp;Hardcover</a>
+         <a href='/biblio/7-9781594201264-0?search_avail=1'>Used&nbsp;Hardcover</a>
+         <a href='/biblio/1-9781594201264-5?search_avail=1'>Sale&nbsp;Hardcover</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>11</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9781590171691-0' title='Chess Story (New York Review Books Classics)'><img src='http://content-1.powells.com/cgi-bin/imageDB.cgi?isbn=9781590171691&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781590171691');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9781590171691-0' title='Chess Story (New York Review Books Classics)'>Chess Story (New York Review Books Classics)</a></h3>  
+      <div class='book-info'>
+         <div><cite>Stefan Zweig</cite>&nbsp;/&nbsp;New York Review Of Books</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Literature - A to Z
+         </div>
+         <div class='more-info'><a href='/biblio/1-9781590171691-0' title='Chess Story (New York Review Books Classics)'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$12.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9781590171691-0&where=24' title='Add &quot;Chess Story (New York Review Books Classics)&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9781590171691-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/65-9781590171691-2?search_avail=1'>Used&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>12</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/7-9780743277457-1' title='The Art of Learning: A Journey in the Pursuit of Excellence'><img src='http://content-7.powells.com/cgi-bin/imageDB.cgi?isbn=9780743277457&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780743277457');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/7-9780743277457-1' title='The Art of Learning: A Journey in the Pursuit of Excellence'>The Art of Learning: A Journey in the Pursuit of Excellence</a></h3>  
+      <div class='book-info'>
+         <div><cite>Josh Waitzkin</cite>&nbsp;/&nbsp;Free Press</div>
+         <div>
+            Used Hardcover
+            &nbsp;/&nbsp;
+            Self Help - General
+         </div>
+         <div class='more-info'><a href='/biblio/7-9780743277457-1' title='The Art of Learning: A Journey in the Pursuit of Excellence'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$17.50 <span class='list-price'><small><strike>$25.00</strike></small></span></big>
+                  <a href='/cgi-bin/Shopping_cart?add=7-9780743277457-1&where=24' title='Add &quot;The Art of Learning: A Journey in the Pursuit of Excellence&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/93-9781416538868-0?search_avail=1'>Palm Reader Ebooks&nbsp;Electronic</a>
+         <a href='/biblio/1-9780743277457-0?search_avail=1'>New&nbsp;Hardcover</a>
+         <a href='/biblio/92-9781416538868-0?search_avail=1'>Microsoft Reader Ebooks&nbsp;Electronic</a>
+         <a href='/biblio/91-9781416538868-0?search_avail=1'>Adobe Digital Editions&nbsp;Electronic</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>13</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/17-9780764550034-5' title='Chess for Dummies 1ST Edition'><img src='http://content-4.powells.com/cgi-bin/imageDB.cgi?isbn=9780764550034&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780764550034');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/17-9780764550034-5' title='Chess for Dummies 1ST Edition'>Chess for Dummies 1ST Edition</a></h3>  
+      <div class='book-info'>
+         <div><cite>James Eade</cite>&nbsp;/&nbsp;For Dummies</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Games - Beginning Chess
+         </div>
+         <div class='more-info'><a href='/biblio/17-9780764550034-5' title='Chess for Dummies 1ST Edition'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$4.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=17-9780764550034-5&where=24' title='Add &quot;Chess for Dummies 1ST Edition&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/2-9780764550034-1?search_avail=1'>Used&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>14</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9780812936827-0' title='Modern Chess Openings 15TH Edition'><img src='http://content-7.powells.com/cgi-bin/imageDB.cgi?isbn=9780812936827&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780812936827');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9780812936827-0' title='Modern Chess Openings 15TH Edition'>Modern Chess Openings 15TH Edition</a></h3>  
+      <div class='book-info'>
+         <div><cite>Nick De Firmian</cite>&nbsp;/&nbsp;Random House Puzzles & Games</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/1-9780812936827-0' title='Modern Chess Openings 15TH Edition'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$29.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9780812936827-0&where=24' title='Add &quot;Modern Chess Openings 15TH Edition&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/62-9780812936827-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>15</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/17-9780671211844-0' title='Chess for Beginners (Fireside Chess Library)'><img src='http://content-4.powells.com/cgi-bin/imageDB.cgi?isbn=9780671211844&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780671211844');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/17-9780671211844-0' title='Chess for Beginners (Fireside Chess Library)'>Chess for Beginners (Fireside Chess Library)</a></h3>  
+      <div class='book-info'>
+         <div><cite>I A Horowitz</cite>&nbsp;/&nbsp;Fireside Books</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Games - Beginning Chess
+         </div>
+         <div class='more-info'><a href='/biblio/17-9780671211844-0' title='Chess for Beginners (Fireside Chess Library)'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$4.00</big>
+                  <a href='/cgi-bin/Shopping_cart?add=17-9780671211844-0&where=24' title='Add &quot;Chess for Beginners (Fireside Chess Library)&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9780671211844-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/17-9780671211844-1?search_avail=1'>Used&nbsp;Trade Paper</a>
+         <a href='/biblio/2-9780671211844-3?search_avail=1'>Sale&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>16</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/62-9780894807671-0' title='The Kids' Book of Chess with Other'><img src='http://content-1.powells.com/cgi-bin/imageDB.cgi?isbn=9780894807671&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780894807671');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/62-9780894807671-0' title='The Kids' Book of Chess with Other'>The Kids' Book of Chess with Other</a></h3>  
+      <div class='book-info'>
+         <div><cite>Harvey Kidder</cite>&nbsp;/&nbsp;Workman Publishing</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Children's - Games
+         </div>
+         <div class='more-info'><a href='/biblio/62-9780894807671-0' title='The Kids' Book of Chess with Other'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$15.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=62-9780894807671-0&where=24' title='Add &quot;The Kids' Book of Chess with Other&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9780894807671-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/1-9780894807671-1?search_avail=1'>Used&nbsp;Miscellaneous</a>
+         <a href='/biblio/17-9780894807671-2?search_avail=1'>Used&nbsp;Miscellaneous</a>
+         <a href='/biblio/1-9780894807671-2?search_avail=1'>Used&nbsp;Miscellaneous</a>
+         <a href='/biblio/63-9780894807671-2?search_avail=1'>Used&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>17</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/71-9781435292734-0' title='Birth of the Chess Queen'><img src='http://content-4.powells.com/cgi-bin/imageDB.cgi?isbn=9781435292734&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781435292734');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/71-9781435292734-0' title='Birth of the Chess Queen'>Birth of the Chess Queen</a></h3>  
+      <div class='book-info'>
+         <div><cite>Marilyn Yalom</cite>&nbsp;/&nbsp;Paw Prints</div>
+         <div>
+            New Prebind
+            &nbsp;/&nbsp;
+            World History - General
+         </div>
+         <div class='more-info'><a href='/biblio/71-9781435292734-0' title='Birth of the Chess Queen'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$30.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=71-9781435292734-0&where=24' title='Add &quot;Birth of the Chess Queen&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/72-9781435292734-0?search_avail=1'>New&nbsp;Prebind</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>18</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/17-9781857443905-0' title='Catastrophe in the Opening'><img src='http://content-5.powells.com/cgi-bin/imageDB.cgi?isbn=9781857443905&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781857443905');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/17-9781857443905-0' title='Catastrophe in the Opening'>Catastrophe in the Opening</a></h3>  
+      <div class='book-info'>
+         <div><cite>James Plaskett</cite>&nbsp;/&nbsp;Everyman Chess</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/17-9781857443905-0' title='Catastrophe in the Opening'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$9.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=17-9781857443905-0&where=24' title='Add &quot;Catastrophe in the Opening&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/62-9781857443905-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/1-9781857443905-1?search_avail=1'>Sale&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>19</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/62-9781857445800-0' title='Play the Queen's Indian'><img src='http://content-0.powells.com/cgi-bin/imageDB.cgi?isbn=9781857445800&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781857445800');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/62-9781857445800-0' title='Play the Queen's Indian'>Play the Queen's Indian</a></h3>  
+      <div class='book-info'>
+         <div><cite>Andrew Greet</cite>&nbsp;/&nbsp;Everyman Chess</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/62-9781857445800-0' title='Play the Queen's Indian'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$24.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=62-9781857445800-0&where=24' title='Add &quot;Play the Queen's Indian&quot; to your Shopping Cart'>
+                     <img src='/images/buttons/preorder_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>20</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/2-9780671656881-4' title='Pandolfini's Endgame Course'><img src='http://content-1.powells.com/cgi-bin/imageDB.cgi?isbn=9780671656881&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780671656881');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/2-9780671656881-4' title='Pandolfini's Endgame Course'>Pandolfini's Endgame Course</a></h3>  
+      <div class='book-info'>
+         <div><cite>Bruce Pandolfini</cite>&nbsp;/&nbsp;Fireside Books</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/2-9780671656881-4' title='Pandolfini's Endgame Course'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$8.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=2-9780671656881-4&where=24' title='Add &quot;Pandolfini's Endgame Course&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/61-9780671656881-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         <a href='/biblio/1-9780671656881-4?search_avail=1'>Used&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>21</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/2-9781401300975-1' title='King's Gambit: A Son, a Father, and the World's Most Dangerous Game'><img src='http://content-5.powells.com/cgi-bin/imageDB.cgi?isbn=9781401300975&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781401300975');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/2-9781401300975-1' title='King's Gambit: A Son, a Father, and the World's Most Dangerous Game'>King's Gambit: A Son, a Father, and the World's Most Dangerous Game</a></h3>  
+      <div class='book-info'>
+         <div><cite>Paul Hoffman</cite>&nbsp;/&nbsp;Hyperion</div>
+         <div>
+            Used Hardcover
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/2-9781401300975-1' title='King's Gambit: A Son, a Father, and the World's Most Dangerous Game'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$16.50</big>
+                  <a href='/cgi-bin/Shopping_cart?add=2-9781401300975-1&where=24' title='Add &quot;King's Gambit: A Son, a Father, and the World's Most Dangerous Game&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/62-9781401300975-0?search_avail=1'>New&nbsp;Hardcover</a>
+         <a href='/biblio/1-9781401300975-2?search_avail=1'>Used&nbsp;Hardcover</a>
+         <a href='/biblio/1-9781401300975-3?search_avail=1'>Sale&nbsp;Hardcover</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>22</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9780571214129-2' title='Bobby Fischer Goes To War'><img src='/images/noimage120.gif' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9780571214129');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9780571214129-2' title='Bobby Fischer Goes To War'>Bobby Fischer Goes To War</a></h3>  
+      <div class='book-info'>
+         <div><cite>David Edmonds</cite>&nbsp;/&nbsp;Faber & Faber Inc *</div>
+         <div>
+            Used Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/1-9780571214129-2' title='Bobby Fischer Goes To War'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$6.50</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9780571214129-2&where=24' title='Add &quot;Bobby Fischer Goes To War&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/66-9780571214112-0?search_avail=1'>New&nbsp;Hardcover</a>
+         <a href='/biblio/7-9780965901550-0?search_avail=1'>Sale&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>23</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9781906552107-1' title='Build Up Your Chess with Artur Yusupov #02: Build Up Your Chess with Artur Yusupov 2: Beyond the Basics'><img src='http://content-7.powells.com/cgi-bin/imageDB.cgi?isbn=9781906552107&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781906552107');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9781906552107-1' title='Build Up Your Chess with Artur Yusupov #02: Build Up Your Chess with Artur Yusupov 2: Beyond the Basics'>Build Up Your Chess with Artur Yusupov #02: Build Up Your Chess with Artur Yusupov 2: Beyond the Basics</a></h3>  
+      <div class='book-info'>
+         <div><cite>Artur Yusupov</cite>&nbsp;/&nbsp;Quality Chess</div>
+         <div>
+            Sale Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/1-9781906552107-1' title='Build Up Your Chess with Artur Yusupov #02: Build Up Your Chess with Artur Yusupov 2: Beyond the Basics'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$23.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9781906552107-1&where=24' title='Add &quot;Build Up Your Chess with Artur Yusupov #02: Build Up Your Chess with Artur Yusupov 2: Beyond the Basics&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/62-9781906552107-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>24</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/62-9781857443394-0' title='English ...E5 (Everyman Chess)'><img src='http://content-4.powells.com/cgi-bin/imageDB.cgi?isbn=9781857443394&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781857443394');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/62-9781857443394-0' title='English ...E5 (Everyman Chess)'>English ...E5 (Everyman Chess)</a></h3>  
+      <div class='book-info'>
+         <div><cite>Alex Raetsky</cite>&nbsp;/&nbsp;Everyman Chess</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/62-9781857443394-0' title='English ...E5 (Everyman Chess)'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$19.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=62-9781857443394-0&where=24' title='Add &quot;English ...E5 (Everyman Chess)&quot; to your Shopping Cart'>
+                     <img src='/images/buttons/backorder_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li>
+   <li class=''>
+      <small class='counter'>25</small>
+      <div id="googler" style="width:80px; float:left; margin-right:1em;">      <a href='/biblio/1-9781906552015-0' title='Build Up Your Chess with Artur Yusupov: The Fundamentals'><img src='http://content-5.powells.com/cgi-bin/imageDB.cgi?isbn=9781906552015&t=86' class='bookcover left' width='86px' /></a>
+        <br />
+        <script>
+           GBS_setLanguage('en');
+           GBS_insertPreviewButtonPopup('ISBN:9781906552015');
+           GBS_setViewerOptions({'showLinkChrome': false});
+        </script>
+      </div>
+            <h3 class='book-title' style='display:inline;'><a href='/biblio/1-9781906552015-0' title='Build Up Your Chess with Artur Yusupov: The Fundamentals'>Build Up Your Chess with Artur Yusupov: The Fundamentals</a></h3>  
+      <div class='book-info'>
+         <div><cite>Artur Yusupov</cite>&nbsp;/&nbsp;Quality Chess</div>
+         <div>
+            New Trade Paper
+            &nbsp;/&nbsp;
+            Games - Chess
+         </div>
+         <div class='more-info'><a href='/biblio/1-9781906552015-0' title='Build Up Your Chess with Artur Yusupov: The Fundamentals'>More info and shelf locations</a></div>   
+               <div class='price-cart'>
+                  <big class='price'>$29.95</big>
+                  <a href='/cgi-bin/Shopping_cart?add=1-9781906552015-0&where=24' title='Add &quot;Build Up Your Chess with Artur Yusupov: The Fundamentals&quot; to your Shopping Cart'>
+                     <img src='/image/buttons/addtocart_smallbutton.gif' style='border:0;' class='add-to-cart-button' />
+                  </a>
+               </div>
+         
+         
+      </div>
+      <p class='also-available'>
+         <b>ALSO AVAILABLE:</b>
+         <a href='/biblio/62-9781906552015-0?search_avail=1'>New&nbsp;Trade Paper</a>
+         &nbsp;
+      </p>
+            <!--  -->
+   </li> 
+</ol>
+   <style>
+
+div#pagination label#sort_by_menubar_select_label {
+   display:inline;
+   width:auto;
+   }
+	
+</style>
+
+<div id='pagination'>
+   <small class='results'>   Results 
+   <b> 1-25 </b>
+   of 
+   <b>1846</b>
+<!--
+ for &nbsp; 
+   
+    <dfn title='keyword=&quot;chess&quot;'>chess</dfn>
+
+ . 
+
+-->   </small>
+
+   <span class='page_nav'>          &laquo;&nbsp;prev                                   <b>1</b>                           <a href="s3?kw=chess&start=26" >2</a>                           <a href="s3?kw=chess&start=51" >3</a>                           <a href="s3?kw=chess&start=76" >4</a>                           <a href="s3?kw=chess&start=101" >5</a>             &nbsp;&hellip;&nbsp;
+      <a href="s3?kw=chess&start=1826" >74</a>
+            <a href="s3?kw=chess&start=26"  class='prev_next'>
+         next&nbsp;&raquo;
+      </a>
+   </span>
+
+   <small class='sort'>      Per page:            <a href="s3?kw=chess&perpage=10" onclick="UserPrefs.setPref('search_perpage',10);">10</a>            <b>25</b>            <a href="s3?kw=chess&perpage=100" onclick="UserPrefs.setPref('search_perpage',100);">100</a>            <a href="s3?kw=chess&perpage=250" onclick="UserPrefs.setPref('search_perpage',250);">250</a>   </small>
+</div><p id='s_footer'><a href="http://xml.powells.com/search.rss?kw=chess&=rss">
+   <img src='/images/silk/feed.png' style='border:none;' >
+   RSS
+</a>
+<small>
+   (<a href='/info/rss.html'>What's this?</a>)
+</small></p>
+      <img src='/images/clearpixel.gif' border="0" width="574" height="1">
+
+</td></tr>
+
+<tr>
+<td colspan="2" style='height: 1px;'>
+<img src='/images/clearpixel.gif' border="0" width="766" height="1">
+</td></tr>
+
+<tr>
+<td colspan='2'>
+<ul id="prefooter_list">
+<li class="email_print">
+
+
+<SCRIPT language="javascript">
+   var page_title = encodeURIComponent(document.title);
+   document.write("<a href='javascript:window.print();'><img src='/images/margin/print.gif' border=0 alt='print this page' /></a><br /><a href='http://www.powells.com/cgi-bin/send_friend?title=Powell%27s%20Books-Search+Results&link=%2Fs%3Fheader%3DSearch%2BForm%26kw%3Dchess'><img src='/images/margin/sendtofriend.gif' border=0 alt='send this page to a friend' style='margin-top: 5px;' /></a>");
+</script>
+
+
+
+</li>
+</li>
+<li class="backtotop">
+<a href="#top">back to top</a></li>
+</ul>
+
+<hr id="footer_divider">
+
+<div class="boxFooter">
+
+<ul class="ULfooter">
+<li class="a"><a href="/info/help.html">Help</a></li>
+<li><a href="/info/secpri.html">Security and Privacy</a></li>
+<li><a href="/info/shipping.html">Shipping</a></li>
+<li><a href="/info/guarantee.html">Money Back Guarantee</a></li>
+<li><a href="/info/contact.html">Contact Us</a></li> 
+
+</ul>
+
+<ul class="ULfooter">
+<li class="a"><a href="/info/briefhistory.html">About Us</a></li>
+<li><a href="/info/press.html">In the Press</a></li> 
+<li><a href="/partners/partners.html">Partner Program</a></li>
+<li><a href="/cgi-bin/job.pl">Employment</a></li>
+<li><a href="/green">Green Initiatives at Powell's</a></li>
+</ul>
+
+<ul class="ULfooter">
+<li class="a"><a class="cssbutton rss" href="/cgi-bin/partner?cid=120"><span>RSS</span> 2.0</a></li>
+<li><a href="/cgi-bin/delcookie">Log Off</a></li>
+<li>Copyright &#169; 1994-2009 Powells.com <a href="/info/termsofuse.html">Terms of Use</a></li>
+</ul>
+
+<div id="facebook"><a href="http://www.facebook.com/pages/Portland-OR/Powells-Books-Inc/6955862551?ref=mf" target="face"><img src="/images/facebook_badge.gif" border="0" title="Find us on Facebook"></a></div>
+
+<small><strong>Powell's City of Books</strong> is an independent bookstore in Portland, Oregon, that fills a whole city block with more than a million new, used, and
+ out of print books. Shop those shelves &mdash; plus literally millions more books, DVDs, and eBooks &mdash; here at Powells.com.</small>
+
+</div>
+
+
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+
+<script type='text/javascript'>
+_uacct = 'UA-1889218-1';
+urchinTracker();
+</script>
+
+
+
+
+</td>
+</tr>
+</table>
+
+</div>
+
+</body>
+</html>

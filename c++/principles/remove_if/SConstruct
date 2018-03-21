@@ -1,0 +1,3 @@
+env = Environment( CPPPATH=[ '/usr/local/include' ] )
+env.Program( target='main', source=[ 'main.cc', 'func.cc' ] )
+
